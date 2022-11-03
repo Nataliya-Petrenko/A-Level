@@ -5,7 +5,8 @@ import java.util.Arrays;
 
 public class Homework5 {
     public static void main(String[] args) {
-        exercise1();
+//        exercise1();
+        exercise2();
 
     }
 //    Створіть масив з 12 випадкових цілих чисел з відрізка [-15;15]. Визначте який
@@ -14,7 +15,7 @@ public class Homework5 {
     private static void exercise1() {
         Random random = new Random();
         int[] myArray = new int[12];
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < myArray.length; i++) {
             myArray[i] = random.nextInt(30) - 15;
         }
         System.out.println(Arrays.toString(myArray));
@@ -31,7 +32,20 @@ public class Homework5 {
 //    Створіть масив із 8 випадкових цілих чисел з відрізка [1;10]. Виведіть масив на
 //    екран у рядок. Замініть кожен елемент з непарним індексом на нуль. Знову
 //    виведіть масив на екран в окремому рядку
-
+    private static void exercise2() {
+    Random random = new Random();
+    int[] myArray = new int[8];
+    for (int i = 0; i < myArray.length; i++) {
+        myArray[i] = random.nextInt(9) + 1;
+    }
+    System.out.println(Arrays.toString(myArray));
+    for (int i = 0; i < myArray.length; i++) {
+        if (!(i % 2 == 0)) {
+            myArray[i] = 0;
+        }
+    }
+    System.out.println(Arrays.toString(myArray));
+}
 //    Створіть масив з 4 випадкових цілих чисел з відрізка [10;99]. Виведіть його на
 //    екран у рядок. Далі визначте та виведіть на екран повідомлення про те, чи є
 //    масив строго зростаючою послідовністю (приклад: 11, 23, 45, 66).
