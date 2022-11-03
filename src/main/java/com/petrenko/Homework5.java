@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class Homework5 {
     public static void main(String[] args) {
 //        exercise1();
-        exercise2();
-
+//        exercise2();
+        exercise3();
     }
 //    Створіть масив з 12 випадкових цілих чисел з відрізка [-15;15]. Визначте який
 //    елемент є в цьому масиві максимальним і повідомте індекс його останнього
@@ -49,7 +49,24 @@ public class Homework5 {
 //    Створіть масив з 4 випадкових цілих чисел з відрізка [10;99]. Виведіть його на
 //    екран у рядок. Далі визначте та виведіть на екран повідомлення про те, чи є
 //    масив строго зростаючою послідовністю (приклад: 11, 23, 45, 66).
-
+    private static void exercise3() {
+        Random random = new Random();
+        int[] myArray = new int[4];
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = random.nextInt(89) + 10;
+        }
+        System.out.println(Arrays.toString(myArray));
+        boolean arrayIsStrictlyIncreasing = false;
+        for (int i = 0; i < myArray.length - 1; i++) {
+            if (myArray[i] <= myArray[i + 1]) {
+                arrayIsStrictlyIncreasing = true;
+            } else {
+                arrayIsStrictlyIncreasing = false;
+                break;
+            }
+        }
+        System.out.println("Array is strictly increasing: " + arrayIsStrictlyIncreasing);
+    }
 //    Створіть 2 масиви з 5 випадкових цілих чисел з відрізка [0;5] кожен. Виведіть
 //    масиви на екран у двох окремих рядках . Порахуйте середнє арифметичне
 //    елементів кожного масиву і повідомте, для якого з масивів це значення виявилося
