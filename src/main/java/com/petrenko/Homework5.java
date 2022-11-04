@@ -7,7 +7,10 @@ public class Homework5 {
     public static void main(String[] args) {
 //        exercise1();
 //        exercise2();
-        exercise3();
+//        exercise3();
+        exercise41();
+        exercise42();
+//        exercise5();
     }
 //    Створіть масив з 12 випадкових цілих чисел з відрізка [-15;15]. Визначте який
 //    елемент є в цьому масиві максимальним і повідомте індекс його останнього
@@ -72,6 +75,67 @@ public class Homework5 {
 //    елементів кожного масиву і повідомте, для якого з масивів це значення виявилося
 //    більшим (або повідомте, що їхні середні арифметичні рівні)
 
+//    First method
+    private static void exercise41() {
+        Random random = new Random();
+
+        int[] myArray1 = new int[5];
+        for (int i = 0; i < myArray1.length; i++) {
+            myArray1[i] = random.nextInt(5);
+        }
+        System.out.println(Arrays.toString(myArray1));
+        double summa1 = 0;
+        for (int i = 0; i < myArray1.length; i++) {
+            summa1 += myArray1[i];
+        }
+        double average1 = summa1 / myArray1.length;
+
+        int[] myArray2 = new int[5];
+        for (int i = 0; i < myArray2.length; i++) {
+            myArray2[i] = random.nextInt(5);
+        }
+        System.out.println(Arrays.toString(myArray2));
+        double summa2 = 0;
+        for (int i = 0; i < myArray2.length; i++) {
+            summa2 += myArray2[i];
+        }
+        double average2 = summa2 / myArray2.length;
+
+        if (average1 > average2) {
+            System.out.println("The average of the first array is the biggest");
+        } else if (average1 < average2) {
+            System.out.println("The average of the second array is the biggest");
+        } else {
+            System.out.println("Averages of arrays are equals");
+        }
+    }
+
+    //    Second method
+    private static void exercise42() {
+        Random random = new Random();
+        int[][] myArray = new int[2][5];
+        double[] summa = {0, 0};
+        double[] average = {0 ,0};
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = 0; j < myArray[0].length; j++) {
+                myArray[i][j] = random.nextInt(5);
+                summa[i] += myArray[i][j];
+            }
+            System.out.println("Array " + (i + 1) + ": " + Arrays.toString(myArray[i]));
+            average[i] = summa[i] / myArray[0].length;
+        }
+        if (average[0] > average[1]) {
+            System.out.println("The average of the first array is the biggest");
+        } else if (average[0] < average[1]) {
+            System.out.println("The average of the second array is the biggest");
+        } else {
+            System.out.println("Averages of arrays are equals");
+        }
+    }
+
 //    Дополнительное задание - доделать алгоритм сортировки из лекции
+//    private static void exercise() {
+//
+//    }
 
 }
