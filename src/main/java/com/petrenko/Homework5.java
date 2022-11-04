@@ -8,9 +8,9 @@ public class Homework5 {
 //        exercise1();
 //        exercise2();
 //        exercise3();
-        exercise41();
-        exercise42();
-//        exercise5();
+//        exercise41();
+//        exercise42();
+        bubbleSort();
     }
 //    Створіть масив з 12 випадкових цілих чисел з відрізка [-15;15]. Визначте який
 //    елемент є в цьому масиві максимальним і повідомте індекс його останнього
@@ -134,8 +134,31 @@ public class Homework5 {
     }
 
 //    Дополнительное задание - доделать алгоритм сортировки из лекции
-//    private static void exercise() {
-//
-//    }
+    private static void bubbleSort() {
+        final Random random = new Random();
+        final int[] numbers = new int[10];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = random.nextInt(100);
+        }
+        int j = 1;
+        int count;
+        do {
+            System.out.println(Arrays.toString(numbers));
+            count = 0;
+            for (int i = 0; i < numbers.length - j; i++) {
+                int firstNumber = numbers[i];
+                int secondNumber = numbers[i + 1];
+                if (firstNumber > secondNumber) {
+                    int temp = firstNumber;
+                    firstNumber = secondNumber;
+                    secondNumber = temp;
+                    count++;
+                }
+                numbers[i] = firstNumber;
+                numbers[i + 1] = secondNumber;
+            }
+            j++;
+        } while (count > 0);
+    }
 
 }
