@@ -1,34 +1,18 @@
 package com.petrenko;
-//HW 1:
+
+import com.petrenko.model.Car;
+import com.petrenko.service.CarService;
+
+//У класі Main створити 3 машини і показати інформацію на консоль за
+//допомогою класу CarService
 public class Main {
     public static void main(String[] args) {
-        //        1. Створити консольний додаток, який друкує ваше ім'я та прізвище
-        System.out.println("Nataliya Petrenko");
-
-        //        2. Створити консольний додаток, де задано крок "i" 0 - 10 і значення "y" 5. Вивести в консоль на
-        //        кожному кроці інформацію про крок і про значення, з кожним кроком значення збільшується на 2
-        //        Приклад:
-        //        Крок 0, значення 5
-        //        Крок 1, значення 7
-        //        ....
-        //        Крок 10, значення 25
-        int y = 5;
-        for (int i = 0; i <= 10; i++) {
-            System.out.println("Step " + i + ", value " + y);
-            y = y + 2;
-        }
-
-        //        3. Створити консольний додаток, де задано крок "i" 0 - 10, на кожному кроці виводити в консоль
-        //        номер кроку. Додатково, перед виведенням у консоль, зробити перевірку кроку, якщо крок
-        //        дорівнює 3 - пропустити дію. Якщо крок дорівнює 6 зупинити виконання циклу
-        for (int i = 0; i <= 10; i++) {
-            if (i == 3) {
-                continue;
-            }
-            if (i == 6) {
-                break;
-            }
-            System.out.println("Step " + i);
-        }
+        CarService carService = new CarService();
+        Car car1 = carService.create();
+        Car car2 = carService.create();
+        Car car3 = carService.create();
+        carService.print(car1);
+        carService.print(car2);
+        carService.print(car3);
     }
 }
