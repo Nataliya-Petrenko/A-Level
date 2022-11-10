@@ -26,13 +26,13 @@ public class Car {
     public Car() {
     };
 
+    Random random = new Random();
     public Car(String manufacturer, String engine, String color) {
         this.manufacturer = manufacturer;
         this.engine = engine;
         this.color = color;
-        int count = 1;
-        Random random = new Random();
-        int price = Math.abs(random.nextInt());
+        this.count = 1;
+        this.price = Math.abs(random.nextInt());
     }
 
     public String getManufacturer() {
