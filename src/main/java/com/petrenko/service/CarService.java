@@ -12,7 +12,8 @@ import com.petrenko.model.Car;
 import java.util.Random;
 
 public class CarService {
-    Random random = new Random();
+    private final Random random = new Random();
+    private final String[] colors = {"red", "orange", "yellow", "green", "blue", "violet", "black", "white"};
 
     public Car create() {
         Car car = new Car(randomText(5), randomText(5), randomColor());
@@ -34,7 +35,6 @@ public class CarService {
     }
 
     private String randomColor() {
-        String[] colors = {"red", "orange", "yellow", "green", "blue", "violet", "black", "white"};
         return colors[random.nextInt(colors.length)];
     }
 }
