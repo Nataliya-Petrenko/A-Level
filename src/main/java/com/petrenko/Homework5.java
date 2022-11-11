@@ -8,9 +8,9 @@ public class Homework5 {
 //        exercise1();
 //        exercise2();
 //        exercise3();
-//        exercise41();
+        exercise41();
 //        exercise42();
-        bubbleSort();
+//        bubbleSort();
     }
 //    Створіть масив з 12 випадкових цілих чисел з відрізка [-15;15]. Визначте який
 //    елемент є в цьому масиві максимальним і повідомте індекс його останнього
@@ -78,29 +78,20 @@ public class Homework5 {
 //    First method
     private static void exercise41() {
         Random random = new Random();
-
         int[] myArray1 = new int[5];
+        int[] myArray2 = new int[5];
+        double summa1 = 0;
+        double summa2 = 0;
         for (int i = 0; i < myArray1.length; i++) {
             myArray1[i] = random.nextInt(5);
-        }
-        System.out.println(Arrays.toString(myArray1));
-        double summa1 = 0;
-        for (int i = 0; i < myArray1.length; i++) {
-            summa1 += myArray1[i];
-        }
-        double average1 = summa1 / myArray1.length;
-
-        int[] myArray2 = new int[5];
-        for (int i = 0; i < myArray2.length; i++) {
             myArray2[i] = random.nextInt(5);
-        }
-        System.out.println(Arrays.toString(myArray2));
-        double summa2 = 0;
-        for (int i = 0; i < myArray2.length; i++) {
+            summa1 += myArray1[i];
             summa2 += myArray2[i];
         }
+        System.out.println(Arrays.toString(myArray1));
+        System.out.println(Arrays.toString(myArray2));
+        double average1 = summa1 / myArray1.length;
         double average2 = summa2 / myArray2.length;
-
         if (average1 > average2) {
             System.out.println("The average of the first array is the biggest");
         } else if (average1 < average2) {
