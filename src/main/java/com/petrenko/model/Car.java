@@ -1,38 +1,27 @@
 package com.petrenko.model;
 
-//Створити клас com.{lastname}.model.Car
-//Добавить в класс Car поля, сеттеры, геттеры
-//○ String manufacturer
-//○ String engine
-//○ String color
-//○ int count
-//○ int price
-//Добавить конструкторы в модель
-//○ Конструктор по умолчанию
-//○ Конструктор принимающий 3 параметра (manufacturer, engine, color), устанавливающий
-//значение count = 1, price = случайное число
-
-import com.petrenko.*;
-
 import java.util.Random;
+import java.util.UUID;
 
 public class Car {
     private String manufacturer;
     private String engine;
-    private String color;
+    private Color color;
     private int count;
     private int price;
+    private UUID uuidOfCar;
 
     public Car() {
     };
 
     Random random = new Random();
-    public Car(String manufacturer, String engine, String color) {
+    public Car(String manufacturer, String engine, Color color) {
         this.manufacturer = manufacturer;
         this.engine = engine;
         this.color = color;
         this.count = 1;
         this.price = Math.abs(random.nextInt());
+        this.uuidOfCar = UUID.randomUUID();
     }
 
     public String getManufacturer() {
@@ -51,11 +40,11 @@ public class Car {
         this.engine = engine;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -73,5 +62,8 @@ public class Car {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+    public UUID getUuidOfCar () {
+        return uuidOfCar;
     }
 }
