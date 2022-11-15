@@ -1,20 +1,44 @@
 package com.petrenko.service;
 
+//Homework 7
+//Додати в клас CarService статичний метод check(), який приймає Car і перевіряє:
+//○ що кількість (count) більша за 0
+//○ потужність (power) двигуна більше 200
+//○ Якщо обидві перевірки пройдено успішно - виводить на консоль, що машина
+//повністю готова до продажу
+//○ Якщо якась перевірка не пройдена - виводить на консоль яка саме (можуть не
+//пройти обидві перевірки)
+
 import com.petrenko.model.Car;
 import com.petrenko.model.Color;
+import com.petrenko.model.Engine;
 import com.petrenko.repository.CarRepository;
 
 import java.util.Random;
 import java.util.UUID;
 
 public class CarService {
+    public static void check(final Car car) {
+        final boolean checkCount = car.getCount() > 0;
+        final boolean checkPower = car.getEngine().getPower() > 200;
+        if (checkCount && checkPower) {
+            System.out.println("Car is fully ready for sell.");
+            return;
+        }
+        if (!checkCount) {
+            System.out.print("Count <= 0. ");
+        }
+        if (!checkPower) {
+            System.out.println("Power <= 200.");
+        }
+    }
     private final Random random = new Random();
     public CarService(final CarRepository carRepository) {
         this.carRepository = carRepository;
     }
     CarRepository carRepository = new CarRepository();
     public Car create() {
-        final Car car = new Car(randomText(5), randomText(5), Color.randomColor());
+        final Car car = new Car(randomText(5), new Engine(randomText(5)), Color.randomColor());
         carRepository.save(car);
         return car;
     }
@@ -35,9 +59,9 @@ public class CarService {
         if (car == null) {
             return;
         }
-        System.out.printf("Manufacturer: %s. Engine: %s. Color: %s. Count: %d. Price: %d. UUID: %s.%n",
-                car.getManufacturer(), car.getEngine(), car.getColor(), car.getCount(), car.getPrice(),
-                car.getUuidOfCar());
+        System.out.printf("Manufacturer: %s. Engine: type - %s, power - %d. Color: %s. Count: %d. Price: %d. UUID: %s.%n",
+                car.getManufacturer(), car.getEngine().getType(), car.getEngine().getPower(), car.getColor(),
+                car.getCount(), car.getPrice(), car.getUuidOfCar());
     }
     public void printByUuid(UUID uuidOfCar) {
         final Car car = carRepository.getByUudi(uuidOfCar);

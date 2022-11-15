@@ -1,10 +1,15 @@
 package com.petrenko;
 
+//Homework 7
+//Створити Enum із кількома кольорами та замінити тип поля color у класі Car.
+//Створити клас com.{lastname}.model.Engine з полями int power (0-1000) і String type.
+//Змінити клас Car на використання Engine.
+//Викликати метод check() у класі Main для кожної створеної машин
+
 import com.petrenko.model.Car;
 import com.petrenko.model.Color;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.service.CarService;
-import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,12 +70,18 @@ public class Main {
 //        carService.printAll();
 
 //  -----------Check method insert(int indexInsertCar)-----------
-        System.out.println("Created new cars:");
-        carService.create(5);
-        carService.printAll();
-        carService.insert(15);
-        System.out.println("Cars with inserted car:");
-        carService.printAll();
+//        System.out.println("Created new cars:");
+//        carService.create(5);
+//        carService.printAll();
+//        carService.insert(15);
+//        System.out.println("Cars with inserted car:");
+//        carService.printAll();
 
+//  -----------Check method check(Car car)-----------
+        final Car[] cars = carService.create(5);
+        carService.printAll();
+        for (Car car : cars) {
+            carService.check(car);
+        }
     }
 }
