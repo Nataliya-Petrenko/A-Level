@@ -15,7 +15,7 @@ public class Car {
     public Car() {
     };
 
-    Random random = new Random();
+    private Random random = new Random();
     public Car(String manufacturer, Engine engine, Color color) {
         this.manufacturer = manufacturer;
         this.engine = engine;
