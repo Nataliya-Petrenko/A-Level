@@ -1,24 +1,19 @@
 package com.petrenko.service;
 
-//Homework 7
-//Додати в клас CarService статичний метод check(), який приймає Car і перевіряє:
-//○ що кількість (count) більша за 0
-//○ потужність (power) двигуна більше 200
-//○ Якщо обидві перевірки пройдено успішно - виводить на консоль, що машина
-//повністю готова до продажу
-//○ Якщо якась перевірка не пройдена - виводить на консоль яка саме (можуть не
-//пройти обидві перевірки)
-
 import com.petrenko.model.Car;
 import com.petrenko.model.Color;
 import com.petrenko.model.Engine;
 import com.petrenko.repository.CarRepository;
+import com.petrenko.util.RandomGenerator;
 
 import java.util.Random;
-import java.util.UUID;
 
 public class CarService {
     public static void check(final Car car) {
+        if (car == null) {
+            System.out.println("Car is null");
+            return;
+        }
         final boolean checkCount = car.getCount() > 0;
         final boolean checkPower = car.getEngine().getPower() > 200;
         if (checkCount && checkPower) {
@@ -33,16 +28,30 @@ public class CarService {
         }
     }
     private final Random random = new Random();
+    private final CarRepository carRepository;
     public CarService(final CarRepository carRepository) {
         this.carRepository = carRepository;
     }
-    CarRepository carRepository = new CarRepository();
+
+    public int create(RandomGenerator randomGenerator) {
+        final int numberCars = randomGenerator.randomGenerator();
+        if (numberCars <= 0 || numberCars > 10) {
+            return -1;
+        }
+        final Car[] cars = create(numberCars);
+        printAll(cars);
+        System.out.println("Number of created cars: " + numberCars);
+        return numberCars;
+    }
     public Car create() {
         final Car car = new Car(randomText(5), new Engine(randomText(5)), Color.randomColor());
         carRepository.save(car);
         return car;
     }
     public Car[] create(final int numberOfCars) {
+        if (numberOfCars < 0) {
+            return new Car[0];
+        }
         Car[] cars = new Car[numberOfCars];
         for (int i = 0; i < numberOfCars; i++) {
             cars[i] = create();
@@ -59,12 +68,29 @@ public class CarService {
         if (car == null) {
             return;
         }
-        System.out.printf("Manufacturer: %s. Engine: type - %s, power - %d. Color: %s. Count: %d. Price: %d. UUID: %s.%n",
-                car.getManufacturer(), car.getEngine().getType(), car.getEngine().getPower(), car.getColor(),
-                car.getCount(), car.getPrice(), car.getUuidOfCar());
+        if (car.getManufacturer() != null) {
+            System.out.print("Manufacturer: " + car.getManufacturer() + ". ");
+        }
+        if (car.getEngine() != null) {
+            System.out.print("Engine: type - " + car.getEngine().getType() +
+                    ", power - " + car.getEngine().getPower() + ". ");
+        }
+        if (car.getColor() != null) {
+            System.out.print("Color: " + car.getColor() + ". ");
+        }
+        if (car.getCount() >= 0) {
+            System.out.print("Count: " + car.getCount() + ". ");
+        }
+        if (car.getPrice() >= 0) {
+            System.out.print("Price: " + car.getPrice() + ". ");
+        }
+        if (car.getUuidOfCar() != null) {
+            System.out.print("UUID: " + car.getUuidOfCar() + ". ");
+        }
+        System.out.println();
     }
-    public void printByUuid(UUID uuidOfCar) {
-        final Car car = carRepository.getByUudi(uuidOfCar);
+    public void printByUuid(String uuidOfCar) {
+        final Car car = carRepository.getByUuid(uuidOfCar);
         if (car == null) {
             return;
         }
@@ -75,16 +101,27 @@ public class CarService {
             print(car);
         }
     }
-    public void updateColor(final UUID uuidOfCar, final Color color) {
+    public void printAll(Car[] cars) {
+        if (cars == null) {
+            return;
+        }
+        for (Car car : cars) {
+            print(car);
+        }
+    }
+    public void updateColor(final String uuidOfCar, final Color color) {
         carRepository.updateColor(uuidOfCar, color);
     }
-    public void updateColorRandom(final UUID uuidOfCar) {
+    public void updateColorRandom(final String uuidOfCar) {
         carRepository.updateColorRandom(uuidOfCar);
     }
-    public void updatePrice(final UUID uuidOfCar, final int price) {
+    public void updatePrice(final String uuidOfCar, final int price) {
+        if (price < 0) {
+            return;
+        }
         carRepository.updatePrice(uuidOfCar, price);
     }
-    public void deleteByUuid(final UUID uuidOfCar) {
+    public void deleteByUuid(final String uuidOfCar) {
         carRepository.deleteByUuid(uuidOfCar);
     }
     private String randomText ( final int lengthRandomText){
