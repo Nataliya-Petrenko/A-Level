@@ -1,6 +1,6 @@
 package com.petrenko.repository;
 
-import com.petrenko.model.Car;
+import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 import com.petrenko.model.Engine;
 import org.junit.jupiter.api.Assertions;
@@ -9,12 +9,12 @@ import org.junit.jupiter.api.Test;
 
 class CarRepositoryTest {
     private CarRepository target;
-    private Car car;
+    private PassengerCar car;
 
     @BeforeEach
     void setUp() {
         target = new CarRepository();
-        car = new Car("abc", new Engine("dfg"), Color.BLUE);
+        car = new PassengerCar("abc", new Engine("dfg"), Color.BLUE);
         target.save(car);
     }
 
@@ -31,7 +31,7 @@ class CarRepositoryTest {
     @Test
     void save_NumberOfCarMore10() {
         for (int i = 0; i < 100; i++) {
-            Car car = new Car();
+            PassengerCar car = new PassengerCar();
             Assertions.assertDoesNotThrow(() -> target.save(car));
         }
     }

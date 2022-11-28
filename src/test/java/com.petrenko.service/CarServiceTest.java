@@ -1,8 +1,9 @@
 package com.petrenko.service;
 
-import com.petrenko.model.Car;
+import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 import com.petrenko.model.Engine;
+import com.petrenko.model.Truck;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 import org.junit.jupiter.api.Test;
@@ -14,14 +15,14 @@ class CarServiceTest {
     private CarService target;
     private CarRepository repository;
     private RandomGenerator randomGenerator;
-    private Car car;
+    private PassengerCar car;
 
     @BeforeEach
     void setUp() {
         repository = Mockito.mock(CarRepository.class);
         randomGenerator = Mockito.mock(RandomGenerator.class);
         target = new CarService(repository);
-        car = new Car("abc", new Engine("dfg"), Color.BLUE);
+        car = new PassengerCar("abc", new Engine("dfg"), Color.BLUE);
     }
 
     @Test
@@ -95,10 +96,22 @@ class CarServiceTest {
         final int actual = target.create(randomGenerator);
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void createPassengerCar_Test() {
+        final PassengerCar car = target.createPassengerCar();
+        Assertions.assertNotNull(car);
+        Assertions.assertNotNull(car.getUuidOfCar());
+    }
 
     @Test
+    public void createTruck_Test() {
+        final Truck car = target.createTruck();
+        Assertions.assertNotNull(car);
+        Assertions.assertNotNull(car.getUuidOfCar());
+    }
+    @Test
     public void create_Test() {
-        final Car car = target.create();
+        final PassengerCar car = target.create();
         Assertions.assertNotNull(car);
         Assertions.assertNotNull(car.getUuidOfCar());
     }
@@ -106,21 +119,21 @@ class CarServiceTest {
     @Test
     public void createNumberOfCars_Test() {
         final int numberOfCars = 5;
-        final Car[] cars = target.create(numberOfCars);
+        final PassengerCar[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
     @Test
     public void createNumberOfCars_Zero() {
         final int numberOfCars = 0;
-        final Car[] cars = target.create(numberOfCars);
+        final PassengerCar[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
     @Test
     public void createNumberOfCars_Negative() {
         final int numberOfCars = -1;
-        final Car[] cars = target.create(numberOfCars);
+        final PassengerCar[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
@@ -138,7 +151,7 @@ class CarServiceTest {
 
     @Test
     public void insertCarIndexInsertCar_CarIsNull() {
-        final Car car = null;
+        final PassengerCar car = null;
         final int indexInsertCar = 5;
         Assertions.assertDoesNotThrow(() -> target.insert(car, indexInsertCar));
     }
@@ -186,13 +199,13 @@ class CarServiceTest {
 
     @Test
     public void print_CarIsNull() {
-        final Car car = null;
+        final PassengerCar car = null;
         Assertions.assertDoesNotThrow(() -> target.print(car));
     }
 
     @Test
     public void print_SomethingFieldsOfCarIsNull() {
-        final Car car = new Car();
+        final PassengerCar car = new PassengerCar();
         Assertions.assertDoesNotThrow(() -> target.print(car));
     }
 
@@ -218,33 +231,33 @@ class CarServiceTest {
 
     @Test
     public void printAll_Test() {
-        final Car[] cars = target.create(5);
+        final PassengerCar[] cars = target.create(5);
         Mockito.when(repository.getAll()).thenReturn(cars);
         Assertions.assertDoesNotThrow(() -> target.printAll());
     }
 
     @Test
     public void printAllRepository_RepositoryIsEmpty() {
-        final Car[] cars = new Car[0];
+        final PassengerCar[] cars = new PassengerCar[0];
         Mockito.when(repository.getAll()).thenReturn(cars);
         Assertions.assertDoesNotThrow(() -> target.printAll());
     }
 
     @Test
     public void printAllArray_Test() {
-        final Car[] cars = target.create(5);
+        final PassengerCar[] cars = target.create(5);
         Assertions.assertDoesNotThrow(() -> target.printAll(cars));
     }
 
     @Test
     public void printAllArray_ArrayIsEmpty() {
-        final Car[] cars = new Car[0];
+        final PassengerCar[] cars = new PassengerCar[0];
         Assertions.assertDoesNotThrow(() -> target.printAll(cars));
     }
 
     @Test
     public void printAllArray_ArrayIsNull() {
-        final Car[] cars = null;
+        final PassengerCar[] cars = null;
         Assertions.assertDoesNotThrow(() -> target.printAll(cars));
     }
 
