@@ -1,9 +1,6 @@
 package com.petrenko.service;
 
-import com.petrenko.model.Color;
-import com.petrenko.model.Engine;
-import com.petrenko.model.PassengerCar;
-import com.petrenko.model.Truck;
+import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 
@@ -35,12 +32,12 @@ public class CarService {
     }
 
     public PassengerCar createPassengerCar() {
-        final PassengerCar car = new PassengerCar(randomText(5), new Engine(randomText(5)), Color.randomColor());
+        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.CAR), Color.randomColor());
         carRepository.save(car);
         return car;
     }
     public Truck createTruck() {
-        final Truck car = new Truck(randomText(5), new Engine(randomText(5)), Color.randomColor());
+        final Truck car = new Truck(randomText(5), new Engine(Type.TRUCK), Color.randomColor());
         return car;
     }
     public int create(RandomGenerator randomGenerator) {
@@ -54,7 +51,7 @@ public class CarService {
         return numberCars;
     }
     public PassengerCar create() {
-        final PassengerCar car = new PassengerCar(randomText(5), new Engine(randomText(5)), Color.randomColor());
+        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.randomType()), Color.randomColor());
         carRepository.save(car);
         return car;
     }

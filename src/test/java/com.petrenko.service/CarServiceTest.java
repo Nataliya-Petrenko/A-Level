@@ -1,9 +1,6 @@
 package com.petrenko.service;
 
-import com.petrenko.model.PassengerCar;
-import com.petrenko.model.Color;
-import com.petrenko.model.Engine;
-import com.petrenko.model.Truck;
+import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 import org.junit.jupiter.api.Test;
@@ -22,7 +19,7 @@ class CarServiceTest {
         repository = Mockito.mock(CarRepository.class);
         randomGenerator = Mockito.mock(RandomGenerator.class);
         target = new CarService(repository);
-        car = new PassengerCar("abc", new Engine("dfg"), Color.BLUE);
+        car = new PassengerCar("abc", new Engine(Type.CAR), Color.BLUE);
     }
 
     @Test
