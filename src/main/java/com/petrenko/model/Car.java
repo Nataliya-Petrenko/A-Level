@@ -9,12 +9,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Car {
+public abstract class Car {
     private String manufacturer;
     private Engine engine;
     private Color color;
     private int count;
     private int price;
+    private Type type;
 
     @Setter(AccessLevel.NONE)
     private String uuidOfCar;
@@ -31,48 +32,6 @@ public class Car {
         this.count = 1;
         this.price = Math.abs(random.nextInt());
         this.uuidOfCar = UUID.randomUUID().toString();
+        this.type = type;
     }
-
-//    public String getManufacturer() {
-//        return manufacturer;
-//    }
-//
-//    public void setManufacturer(String manufacturer) {
-//        this.manufacturer = manufacturer;
-//    }
-//
-//    public Engine getEngine() {
-//        return engine;
-//    }
-//
-//    public void setEngine(Engine engine) {
-//        this.engine = engine;
-//    }
-//
-//    public Color getColor() {
-//        return color;
-//    }
-//
-//    public void setColor(Color color) {
-//        this.color = color;
-//    }
-//
-//    public int getCount() {
-//        return count;
-//    }
-//
-//    public void setCount(int count) {
-//        this.count = count;
-//    }
-//
-//    public int getPrice() {
-//        return price;
-//    }
-//
-//    public void setPrice(int price) {
-//        this.price = price;
-//    }
-//    public String getUuidOfCar () {
-//        return uuidOfCar.toString();
-//    }
 }

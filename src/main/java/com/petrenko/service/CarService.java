@@ -1,15 +1,13 @@
 package com.petrenko.service;
 
-import com.petrenko.model.Car;
-import com.petrenko.model.Color;
-import com.petrenko.model.Engine;
+import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 
 import java.util.Random;
 
 public class CarService {
-    public static void check(final Car car) {
+    public static void check(final PassengerCar car) {
         if (car == null) {
             System.out.println("Car is null");
             return;
@@ -33,38 +31,47 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
+    public PassengerCar createPassengerCar() {
+        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.CAR), Color.randomColor());
+        carRepository.save(car);
+        return car;
+    }
+    public Truck createTruck() {
+        final Truck car = new Truck(randomText(5), new Engine(Type.TRUCK), Color.randomColor());
+        return car;
+    }
     public int create(RandomGenerator randomGenerator) {
         final int numberCars = randomGenerator.randomGenerator();
         if (numberCars <= 0 || numberCars > 10) {
             return -1;
         }
-        final Car[] cars = create(numberCars);
+        final PassengerCar[] cars = create(numberCars);
         printAll(cars);
         System.out.println("Number of created cars: " + numberCars);
         return numberCars;
     }
-    public Car create() {
-        final Car car = new Car(randomText(5), new Engine(randomText(5)), Color.randomColor());
+    public PassengerCar create() {
+        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.randomType()), Color.randomColor());
         carRepository.save(car);
         return car;
     }
-    public Car[] create(final int numberOfCars) {
+    public PassengerCar[] create(final int numberOfCars) {
         if (numberOfCars < 0) {
-            return new Car[0];
+            return new PassengerCar[0];
         }
-        Car[] cars = new Car[numberOfCars];
+        PassengerCar[] cars = new PassengerCar[numberOfCars];
         for (int i = 0; i < numberOfCars; i++) {
             cars[i] = create();
         }
         return cars;
     }
-    public void insert(Car car, int indexInsertCar) {
+    public void insert(PassengerCar car, int indexInsertCar) {
         carRepository.insert(car, indexInsertCar);
     }
     public void insert(int indexInsertCar) {
         carRepository.insert(create(), indexInsertCar);
     }
-    public void print(final Car car) {
+    public void print(final PassengerCar car) {
         if (car == null) {
             return;
         }
@@ -90,22 +97,22 @@ public class CarService {
         System.out.println();
     }
     public void printByUuid(String uuidOfCar) {
-        final Car car = carRepository.getByUuid(uuidOfCar);
+        final PassengerCar car = carRepository.getByUuid(uuidOfCar);
         if (car == null) {
             return;
         }
         print(car);
     }
     public void printAll() {
-        for (Car car : carRepository.getAll()) {
+        for (PassengerCar car : carRepository.getAll()) {
             print(car);
         }
     }
-    public void printAll(Car[] cars) {
+    public void printAll(PassengerCar[] cars) {
         if (cars == null) {
             return;
         }
-        for (Car car : cars) {
+        for (PassengerCar car : cars) {
             print(car);
         }
     }

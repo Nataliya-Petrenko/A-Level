@@ -5,12 +5,12 @@ import java.util.Random;
 public class Engine {
     final private Random random = new Random();
     private int power;
-    private String type;
+    private Type type;
 
     public Engine() {
     }
 
-    public Engine(String type) {
+    public Engine(Type type) {
         this.power = random.nextInt(1000);
         this.type = type;
     }
@@ -19,7 +19,7 @@ public class Engine {
         return power;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
@@ -27,7 +27,7 @@ public class Engine {
         this.power = power;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.type = type;
     }
 }
