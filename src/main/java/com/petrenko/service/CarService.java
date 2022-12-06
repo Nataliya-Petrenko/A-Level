@@ -7,7 +7,7 @@ import com.petrenko.util.RandomGenerator;
 import java.util.Random;
 
 public class CarService {
-    public static void check(final PassengerCar car) {
+    public static void check(final Car car) {
         if (car == null) {
             System.out.println("Car is null");
             return;
@@ -31,47 +31,82 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
-    public PassengerCar createPassengerCar() {
-        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.CAR), Color.randomColor());
+    public boolean carEquals(final Car car1, final Car car2) {
+        if (car1 == null || car2 == null) {
+            return false;
+        }
+        if (carIsEqualsByEngineType(car1, car2)) {
+            return carTwoStepEquals(car1, car2);
+        }
+        return false;
+    }
+
+    private boolean carIsEqualsByEngineType(final Car car1, final Car car2) {
+        return car1.getEngine().getType().equals(car2.getEngine().getType());
+    }
+
+    private boolean carTwoStepEquals(final Car car1, final Car car2) {
+        if (carIsEqualsByHashCode(car1, car2)) {
+            return carIsEqualsByUuid(car1, car2);
+        }
+        return false;
+    }
+
+    private boolean carIsEqualsByHashCode(final Car car1, final Car car2) {
+        return car1.hashCode() == car2.hashCode();
+    }
+
+    private boolean carIsEqualsByUuid(final Car car1, final Car car2) {
+        return car1.getUuidOfCar().equals(car2.getUuidOfCar());
+    }
+
+    public Car create(final Type type) {
+        Car car;
+        if (type == null) {
+           return null;
+        }
+        if (type.equals(Type.CAR)) {
+            car = new PassengerCar(randomText(5), new Engine(type), Color.randomColor());
+        } else if (type.equals(Type.TRUCK)) {
+            car = new Truck(randomText(5), new Engine(type), Color.randomColor());
+        } else {
+            car = null;
+        }
         carRepository.save(car);
         return car;
     }
-    public Truck createTruck() {
-        final Truck car = new Truck(randomText(5), new Engine(Type.TRUCK), Color.randomColor());
-        return car;
-    }
-    public int create(RandomGenerator randomGenerator) {
+
+    public int create(final RandomGenerator randomGenerator) {
         final int numberCars = randomGenerator.randomGenerator();
         if (numberCars <= 0 || numberCars > 10) {
             return -1;
         }
-        final PassengerCar[] cars = create(numberCars);
+        final Car[] cars = create(numberCars);
         printAll(cars);
         System.out.println("Number of created cars: " + numberCars);
         return numberCars;
     }
-    public PassengerCar create() {
-        final PassengerCar car = new PassengerCar(randomText(5), new Engine(Type.randomType()), Color.randomColor());
-        carRepository.save(car);
+    public Car create() {
+        final Car car = create(Type.randomType());
         return car;
     }
-    public PassengerCar[] create(final int numberOfCars) {
+    public Car[] create(final int numberOfCars) {
         if (numberOfCars < 0) {
-            return new PassengerCar[0];
+            return new Car[0];
         }
-        PassengerCar[] cars = new PassengerCar[numberOfCars];
+        Car[] cars = new Car[numberOfCars];
         for (int i = 0; i < numberOfCars; i++) {
             cars[i] = create();
         }
         return cars;
     }
-    public void insert(PassengerCar car, int indexInsertCar) {
+    public void insert(final Car car, final int indexInsertCar) {
         carRepository.insert(car, indexInsertCar);
     }
-    public void insert(int indexInsertCar) {
+    public void insert(final int indexInsertCar) {
         carRepository.insert(create(), indexInsertCar);
     }
-    public void print(final PassengerCar car) {
+    public void print(final Car car) {
         if (car == null) {
             return;
         }
@@ -96,23 +131,23 @@ public class CarService {
         }
         System.out.println();
     }
-    public void printByUuid(String uuidOfCar) {
-        final PassengerCar car = carRepository.getByUuid(uuidOfCar);
+    public void printByUuid(final String uuidOfCar) {
+        final Car car = carRepository.getByUuid(uuidOfCar);
         if (car == null) {
             return;
         }
         print(car);
     }
     public void printAll() {
-        for (PassengerCar car : carRepository.getAll()) {
+        for (Car car : carRepository.getAll()) {
             print(car);
         }
     }
-    public void printAll(PassengerCar[] cars) {
+    public void printAll(final Car[] cars) {
         if (cars == null) {
             return;
         }
-        for (PassengerCar car : cars) {
+        for (Car car : cars) {
             print(car);
         }
     }

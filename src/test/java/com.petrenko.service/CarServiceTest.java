@@ -12,7 +12,7 @@ class CarServiceTest {
     private CarService target;
     private CarRepository repository;
     private RandomGenerator randomGenerator;
-    private PassengerCar car;
+    private Car car;
 
     @BeforeEach
     void setUp() {
@@ -94,21 +94,21 @@ class CarServiceTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void createPassengerCar_Test() {
-        final PassengerCar car = target.createPassengerCar();
+    public void create_PassengerCar() {
+        final Car car = target.create(Type.CAR);
         Assertions.assertNotNull(car);
         Assertions.assertNotNull(car.getUuidOfCar());
     }
 
     @Test
-    public void createTruck_Test() {
-        final Truck car = target.createTruck();
+    public void create_Truck() {
+        final Car car = target.create(Type.TRUCK);
         Assertions.assertNotNull(car);
         Assertions.assertNotNull(car.getUuidOfCar());
     }
     @Test
     public void create_Test() {
-        final PassengerCar car = target.create();
+        final Car car = target.create();
         Assertions.assertNotNull(car);
         Assertions.assertNotNull(car.getUuidOfCar());
     }
@@ -116,21 +116,21 @@ class CarServiceTest {
     @Test
     public void createNumberOfCars_Test() {
         final int numberOfCars = 5;
-        final PassengerCar[] cars = target.create(numberOfCars);
+        final Car[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
     @Test
     public void createNumberOfCars_Zero() {
         final int numberOfCars = 0;
-        final PassengerCar[] cars = target.create(numberOfCars);
+        final Car[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
     @Test
     public void createNumberOfCars_Negative() {
         final int numberOfCars = -1;
-        final PassengerCar[] cars = target.create(numberOfCars);
+        final Car[] cars = target.create(numberOfCars);
         Assertions.assertNotNull(cars);
     }
 
@@ -228,7 +228,7 @@ class CarServiceTest {
 
     @Test
     public void printAll_Test() {
-        final PassengerCar[] cars = target.create(5);
+        final Car[] cars = target.create(5);
         Mockito.when(repository.getAll()).thenReturn(cars);
         Assertions.assertDoesNotThrow(() -> target.printAll());
     }
@@ -242,7 +242,7 @@ class CarServiceTest {
 
     @Test
     public void printAllArray_Test() {
-        final PassengerCar[] cars = target.create(5);
+        final Car[] cars = target.create(5);
         Assertions.assertDoesNotThrow(() -> target.printAll(cars));
     }
 
