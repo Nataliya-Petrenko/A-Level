@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class Car {
+public abstract class Car implements CountRestore {
     private String manufacturer;
     private Engine engine;
     private Color color;

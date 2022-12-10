@@ -1,12 +1,13 @@
 package com.petrenko.repository;
 
+import com.petrenko.model.Car;
 import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 
 public class CarRepository {
-    private static PassengerCar[] cars = new PassengerCar[10];
+    private static Car[] cars = new Car[10];
 
-    public void save(final PassengerCar car) {
+    public void save(final Car car) {
         for (int i = 0; i < cars.length; i++) {
             if (cars[i] == null) {
                 cars[i] = car;
@@ -17,7 +18,7 @@ public class CarRepository {
             }
         }
     }
-    public void insert(final PassengerCar car, int indexInsertCar) {
+    public void insert(final Car car, int indexInsertCar) {
         if (car == null) {
             return;
         }
@@ -32,12 +33,12 @@ public class CarRepository {
                 indexOfLastCar() - indexInsertCar + 1);
         cars[indexInsertCar] = car;
     }
-    public PassengerCar[] getAll() {
-        final PassengerCar[] carsArray = new PassengerCar[indexOfLastCar() + 1];
+    public Car[] getAll() {
+        final Car[] carsArray = new Car[indexOfLastCar() + 1];
         System.arraycopy(cars, 0, carsArray, 0, indexOfLastCar() + 1);
         return carsArray;
     }
-    public PassengerCar getByUuid(final String uuidOfCar) {
+    public Car getByUuid(final String uuidOfCar) {
         if (uuidOfCar == null) {
             return null;
         }
@@ -48,14 +49,14 @@ public class CarRepository {
         return cars[indexCar];
     }
     public void updateColor(final String uuidOfCar, final Color color) {
-        final PassengerCar car = getByUuid(uuidOfCar);
+        final Car car = getByUuid(uuidOfCar);
         if (car == null || color == null) {
             return;
         }
         car.setColor(color);
     }
     public void updateColorRandom(final String uuidOfCar) {
-        final PassengerCar car = getByUuid(uuidOfCar);
+        final Car car = getByUuid(uuidOfCar);
         if (car == null) {
             return;
         }
@@ -69,7 +70,7 @@ public class CarRepository {
         if (price < 0) {
             return;
         }
-        final PassengerCar car = getByUuid(uuidOfCar);
+        final Car car = getByUuid(uuidOfCar);
         if (car == null) {
             return;
         }
@@ -100,7 +101,7 @@ public class CarRepository {
     }
     private int indexOfLastCar() {
         int indexOfLastCar = -1;
-        for (PassengerCar car : cars) {
+        for (Car car : cars) {
             if (car != null) {
                 indexOfLastCar++;
             } else {
@@ -110,7 +111,7 @@ public class CarRepository {
         return indexOfLastCar;
     }
     private void increaseArray() {
-        PassengerCar[] carsNewArray = new PassengerCar[cars.length * 2];
+        Car[] carsNewArray = new Car[cars.length * 2];
         System.arraycopy(cars, 0, carsNewArray, 0, cars.length);
         cars = carsNewArray;
     }

@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PassengerCar extends Car implements CountRestore{
+public class PassengerCar extends Car {
     private int passengerCount;
 
     public PassengerCar() {
