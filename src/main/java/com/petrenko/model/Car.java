@@ -1,5 +1,6 @@
 package com.petrenko.model;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.UUID;
 import com.petrenko.model.Engine;
@@ -33,5 +34,10 @@ public abstract class Car implements CountRestore {
         this.price = Math.abs(random.nextInt());
         this.uuidOfCar = UUID.randomUUID().toString();
         this.type = type;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(manufacturer, engine, color, count, price, type, uuidOfCar);
     }
 }
