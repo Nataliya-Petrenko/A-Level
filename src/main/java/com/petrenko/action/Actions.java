@@ -5,6 +5,8 @@ import lombok.Getter;
 @Getter
 public enum Actions {
     CREATE(" Create cars", new CreateAction()),
+    PRINT_ALL_CARS(" Print cars", new PrintAllAction()),
+    COMPARE(" Compare cars", new CompareAction()),
     EXIT(" Exit", new ExitAction());
 
     private final String name;
