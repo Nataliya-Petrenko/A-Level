@@ -1,39 +1,36 @@
 package com.petrenko;
 
+import com.petrenko.action.Actions;
 import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.service.CarService;
 import com.petrenko.util.AlgorithmUtil;
+import com.petrenko.util.UserInput;
+import lombok.SneakyThrows;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.Buffer;
 
 public class Main {
+//    @SneakyThrows
     public static void main(String[] args) {
-        final CarService carService = new CarService(new CarRepository());
+        final Actions[] values = Actions.values();
+        final String[] names = mapActionsToName(values);
 
-        Car[] cars = carService.create(5);
-
-        System.out.println("Array of cars:");
-        carService.printAll();
-
-        String carId = cars[3].getUuidOfCar();
-        System.out.println("Car which we'll look for: ");
-        carService.printByUuid(carId);
-
-        System.out.println("Sorted array of cars:");
-        Car[] sortedCars = AlgorithmUtil.bubbleSort(cars);
-        carService.printAll(sortedCars);
-
-        int indexOfCar = AlgorithmUtil.binarySearch(cars, carId);
-        System.out.println("Index the car (binarySearch): " + indexOfCar);
-
-        int indexOfCar1 = AlgorithmUtil.binarySearch(cars, "hhsdjhdshj");
-        System.out.println("Index the car (binarySearch): " + indexOfCar1);
-
-        int indexOfCar2 = AlgorithmUtil.recursiveBinarySearch(cars, 0, cars.length - 1, carId);
-        System.out.println("Index the car (recursiveBinarySearch): " + indexOfCar2);
-
-        int indexOfCar3 = AlgorithmUtil.recursiveBinarySearch(cars, 0, cars.length - 1,
-                "hhsdjhdshj");
-        System.out.println("Index the car (recursiveBinarySearch): " + indexOfCar3);
+        while (true) {
+            final int userChoice = UserInput.menu(names);
+            values[userChoice].execute();
+        }
 
     }
+
+    private static String[] mapActionsToName(final Actions[] values) {
+        String[] names = new String[values.length];
+        for (int i = 0; i < values.length; i++) {
+            names[i] = values[i].getName();
+        }
+        return names;
+    }
+
 }

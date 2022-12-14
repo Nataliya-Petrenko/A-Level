@@ -8,6 +8,21 @@ import java.util.Optional;
 import java.util.Random;
 
 public class CarService {
+    private static CarService instance;
+    private final Random random = new Random();
+    private final CarRepository carRepository;
+
+    private CarService(final CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
+
+    public static CarService getInstance() {
+        if (instance == null) {
+            instance = new CarService(CarRepository.getInstance());
+        }
+        return instance;
+    }
+
     public static void check(final Car car) {
         if (car == null) {
             System.out.println("Car is null");
@@ -25,13 +40,6 @@ public class CarService {
         if (!checkPower) {
             System.out.println("Power <= 200.");
         }
-    }
-
-    private final Random random = new Random();
-    private final CarRepository carRepository;
-
-    public CarService(final CarRepository carRepository) {
-        this.carRepository = carRepository;
     }
 
     public void printManufacturerAndCount(final Car car) {
