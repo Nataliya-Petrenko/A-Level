@@ -4,9 +4,10 @@ import com.petrenko.model.Car;
 import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 
-public class CarRepository {
+public class CarRepository implements CarRepositoryInterface<Car>{
     private static CarRepository instance;
     private static Car[] cars = new Car[10];
+
     private CarRepository() {
     }
     public static CarRepository getInstance() {
