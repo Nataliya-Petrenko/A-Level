@@ -8,6 +8,21 @@ import java.util.Optional;
 import java.util.Random;
 
 public class CarService {
+    private static CarService instance;
+    private final Random random = new Random();
+    private final CarRepository carRepository;
+
+    private CarService(final CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
+
+    public static CarService getInstance() {
+        if (instance == null) {
+            instance = new CarService(CarRepository.getInstance());
+        }
+        return instance;
+    }
+
     public static void check(final Car car) {
         if (car == null) {
             System.out.println("Car is null");
@@ -27,40 +42,31 @@ public class CarService {
         }
     }
 
-    private final Random random = new Random();
-    private final CarRepository carRepository;
-
-    public CarService(final CarRepository carRepository) {
-        this.carRepository = carRepository;
-    }
-
     public void printManufacturerAndCount(final Car car) {
-        final Optional<Car> carOptional = Optional.ofNullable(car);
-        carOptional.ifPresent(c -> {
+        Optional.ofNullable(car)
+                .ifPresent(c -> {
             System.out.printf("Manufacturer: %s. Count: %d.%n",
                     c.getManufacturer(), c.getCount());
         });
     }
 
     public void printColor(final Car car) {
-        final Optional<Car> carOptional = Optional.ofNullable(car);
-        final Car checkedCar = carOptional.orElse(create());
+        final Car checkedCar = Optional.ofNullable(car)
+                .orElse(create());
         System.out.println("Color of car: " + checkedCar.getColor());
     }
 
     public void checkCount(final Car car) {
-        final Optional<Car> carOptional = Optional.ofNullable(car);
-        carOptional
+        final Car carOptional = Optional.ofNullable(car)
                 .filter(c -> {
                     return c.getCount() > 10;
                 })
                 .orElseThrow(() -> new UserInputException("Count <= 10"));
-        printManufacturerAndCount(carOptional.get());
+        printManufacturerAndCount(carOptional);
     }
 
     public void printEngineInfo(final Car car) {
-        final Optional<Car> carOptional = Optional.ofNullable(car);
-        final Car newCarOptional = carOptional.orElseGet(() -> {
+        final Car newCarOptional = Optional.ofNullable(car).orElseGet(() -> {
             System.out.println("Created new random car");
             return create();
         });
@@ -74,8 +80,7 @@ public class CarService {
     }
 
     public void printInfo(final Car car) {
-        final Optional<Car> carOptional = Optional.ofNullable(car);
-        carOptional.ifPresentOrElse(
+        Optional.ofNullable(car).ifPresentOrElse(
                 c -> {
                     print(c);
                 },
@@ -190,6 +195,10 @@ public class CarService {
             System.out.print("UUID: " + car.getUuidOfCar() + ". ");
         }
         System.out.println();
+    }
+
+    public Car getByUuid(final String uuidOfCar) {
+        return carRepository.getByUuid(uuidOfCar);
     }
 
     public void printByUuid(final String uuidOfCar) {

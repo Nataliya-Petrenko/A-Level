@@ -5,7 +5,16 @@ import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 
 public class CarRepository {
+    private static CarRepository instance;
     private static Car[] cars = new Car[10];
+    private CarRepository() {
+    }
+    public static CarRepository getInstance() {
+        if (instance == null) {
+            instance = new CarRepository();
+        }
+        return instance;
+    }
 
     public void save(final Car car) {
         for (int i = 0; i < cars.length; i++) {
