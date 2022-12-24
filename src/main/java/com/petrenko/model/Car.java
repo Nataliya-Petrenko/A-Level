@@ -7,6 +7,7 @@ import com.petrenko.model.Engine;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -34,6 +35,11 @@ public abstract class Car implements CountRestore {
         this.price = Math.abs(random.nextInt());
         this.uuidOfCar = UUID.randomUUID().toString();
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "UUID: " + uuidOfCar;
     }
 
     @Override
