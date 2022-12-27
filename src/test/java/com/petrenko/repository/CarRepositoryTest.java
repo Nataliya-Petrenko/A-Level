@@ -14,7 +14,7 @@ class CarRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        target = new CarRepository();
+        target = CarRepository.getInstance();
         car = new PassengerCar("abc", new Engine(Type.CAR), Color.BLUE);
         target.save(car);
     }
