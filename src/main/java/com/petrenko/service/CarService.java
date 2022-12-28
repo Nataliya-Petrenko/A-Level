@@ -4,8 +4,7 @@ import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 
 public class CarService {
     private static CarService instance;
@@ -40,6 +39,35 @@ public class CarService {
         if (!checkPower) {
             System.out.println("Power <= 200.");
         }
+    }
+
+    public Map<String, Integer> mapManufacturerCount(Car[] cars) {
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < cars.length; i++) {
+            String carManufacturer = cars[i].getManufacturer();
+            Integer carCount = cars[i].getCount();
+            if (map.containsKey(carManufacturer)) {
+                carCount += map.get(carManufacturer);
+            }
+            map.put(carManufacturer, carCount);
+        }
+        return map;
+    }
+
+    public Map<Integer, List<Car>> mapPowerCar(Car[] cars) {
+        Map<Integer, List<Car>> map = new HashMap<>();
+        for (int i = 0; i < cars.length; i++) {
+            Integer powerOfEngine = cars[i].getEngine().getPower();
+            List<Car> listCar;
+            if (map.containsKey(powerOfEngine)) {
+                listCar = map.get(powerOfEngine);
+            } else {
+                listCar = new ArrayList<>();
+            }
+            listCar.add(cars[i]);
+            map.put(powerOfEngine, listCar);
+        }
+        return map;
     }
 
     public void printManufacturerAndCount(final Car car) {

@@ -187,13 +187,13 @@ public class CarList {
 
     @Getter
     @Setter
-    public class ElementCarList {
+    private class ElementCarList {
         private Car element;
         private ElementCarList previousElement;
         private ElementCarList nextElement;
         private static int count;
 
-        public ElementCarList(Car element) {
+        private ElementCarList(Car element) {
             this.element = element;
             count++;
         }
