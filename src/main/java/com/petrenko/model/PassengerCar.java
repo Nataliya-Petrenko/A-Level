@@ -20,7 +20,7 @@ public class PassengerCar extends Car {
     @Override
     public void restore() {
         this.setCount(100);
-        System.out.println("Count: " + this.getCount());
+//        System.out.println("Count: " + this.getCount());
 
     }
 }
