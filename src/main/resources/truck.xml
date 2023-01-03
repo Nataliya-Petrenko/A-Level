@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CAR>
+    <manufacturer>Manufacturer2</manufacturer>
+    <engine>
+        <type>TRUCK</type>
+        <power>350</power>
+    </engine>
+    <color>BLUE</color>
+    <count>5</count>
+    <price>7000000</price>
+    <id>11121314</id>
+    <loadCapacity>20000</loadCapacity>
+</CAR>

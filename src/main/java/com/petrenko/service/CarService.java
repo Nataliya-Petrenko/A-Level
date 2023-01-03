@@ -3,10 +3,14 @@ package com.petrenko.service;
 import com.petrenko.model.*;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
+import org.junit.Assert;
 
+import java.io.*;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toCollection;
@@ -16,6 +20,7 @@ public class CarService {
     private static CarService instance;
     private final Random random = new Random();
     private final CarRepository carRepository;
+    private String string;
 
     private CarService(final CarRepository carRepository) {
         this.carRepository = carRepository;
@@ -45,6 +50,53 @@ public class CarService {
         if (!checkPower) {
             System.out.println("Power <= 200.");
         }
+    }
+
+    public Car carFromFile(String file) {
+        Map<String, String> map;
+        if (file.endsWith(".xml")) {
+            map = xmlToMap(file);
+        } else if (file.endsWith(".json")) {
+            map = jsonToMap(file);
+        } else {
+            throw new UserInputException("Unknown file format");
+        }
+        return mapToObject(map);
+    }
+
+    public Map<String, String> xmlToMap(String file) {
+        InputStream input = input(file);
+        if (input == null) {
+            throw new UserInputException("File not exist");
+        }
+        return putMatchedPairToMapFromInput(input, "<(.*)>(.*)<.*");
+    }
+
+    public Map<String, String> jsonToMap(String file) {
+        InputStream input = input(file);
+        if (input == null) {
+            throw new UserInputException("File not exist");
+        }
+        return putMatchedPairToMapFromInput(input, "\"(.*)\".*\"(.*)\".*");
+    }
+
+    private InputStream input(String file) {
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        return loader.getResourceAsStream(file);
+    }
+
+    private Map<String, String> putMatchedPairToMapFromInput(InputStream input, String regex) {
+        Map<String, String> map = new HashMap<>();
+        Scanner scanner = new Scanner(input);
+        while (scanner.hasNext()) {
+            String s = scanner.nextLine();
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(s);
+            if (matcher.find()) {
+                map.put(matcher.group(1), matcher.group(2));
+            }
+        }
+       return map;
     }
 
     public List<String> findManufacturerByPrice(Car[] cars, int price) {
@@ -86,37 +138,51 @@ public class CarService {
                 .allMatch(predicate);
     }
 
-    public Car mapToObject(Map<String, Object> map) {
-        if (map == null) {
+    public Car mapToObject(Map<String, String> mapByXml) {
+        if (mapByXml == null) {
             throw new NullPointerException("Map not exist");
         }
 
         final Function<Map, Car> function = m -> {
-            if (m.get("type") == Type.CAR) {
-                return new PassengerCar();
-            } else if (m.get("type") == Type.TRUCK){
-                return new Truck();
+            if (m.get("type").equals("CAR")) {
+                PassengerCar passengerCar = new PassengerCar();
+                passengerCar.setEngine(new Engine(Type.CAR));
+                return passengerCar;
+            } else if (m.get("type").equals("TRUCK")) {
+                Truck truck = new Truck();
+                truck.setEngine(new Engine(Type.TRUCK));
+                return truck;
             } else {
                 throw new NullPointerException("Type of car not exist");
             }
         };
 
-        return function.andThen(c -> {
-                    if (map.get("manufacturer") != null) {
-                        c.setManufacturer((String) map.get("manufacturer"));
-                    }
-                    if (map.get("color") != null) {
-                        c.setColor((Color) map.get("color"));
-                    }
-                    if (map.get("count") != null) {
-                        c.setCount((int) map.get("count"));
-                    }
-                    if (map.get("price") != null) {
-                        c.setPrice((int) map.get("price"));
-                    }
+        Car car = function.andThen(c -> {
+                    setFieldsOfCar(mapByXml, c);
                     return c;
                 })
-                .apply(map);
+                .apply(mapByXml);
+
+        return car;
+    }
+
+    private void setFieldsOfCar(Map<String, String> mapByXml, Car car) {
+        Optional.ofNullable(mapByXml.get("manufacturer")).
+                ifPresent(car::setManufacturer);
+        Optional.ofNullable(mapByXml.get("power")).
+                ifPresent(s -> car.getEngine().setPower(Integer.parseInt(s)));
+        Optional.ofNullable(mapByXml.get("color")).
+                ifPresent(s -> car.setColor(Color.valueOf(s)));
+        Optional.ofNullable(mapByXml.get("count")).
+                ifPresent(s -> car.setCount(Integer.parseInt(s)));
+        Optional.ofNullable(mapByXml.get("price")).
+                ifPresent(s -> car.setPrice(Integer.parseInt(s)));
+        Optional.ofNullable(mapByXml.get("id")).
+                ifPresent(car::setUuidOfCar);
+        Optional.ofNullable(mapByXml.get("passengerCount")).
+                ifPresent(s -> ((PassengerCar) car).setPassengerCount(Integer.parseInt(s)));
+        Optional.ofNullable(mapByXml.get("loadCapacity")).
+                ifPresent(s -> ((Truck) car).setLoadCapacity(Integer.parseInt(s)));
     }
 
     public Map<Color, Long> innerList(List<List<Car>> carsLists, int price) {
@@ -309,6 +375,13 @@ public class CarService {
         }
         if (car.getPrice() >= 0) {
             System.out.print("Price: " + car.getPrice() + ". ");
+        }
+        if (car.getType() == Type.CAR && ((PassengerCar) car).getPassengerCount() != 0) {
+            System.out.print("Passenger count: " +
+                    ((PassengerCar) car).getPassengerCount() + ". ");
+        }
+        if (car.getType() == Type.TRUCK && ((Truck) car).getLoadCapacity() != 0) {
+            System.out.print("Load capacity: " + ((Truck) car).getLoadCapacity() + ". ");
         }
         if (car.getUuidOfCar() != null) {
             System.out.print("UUID: " + car.getUuidOfCar() + ". ");

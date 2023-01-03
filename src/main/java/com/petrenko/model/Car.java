@@ -19,7 +19,7 @@ public abstract class Car implements CountRestore {
     private int price;
     private Type type;
 
-    @Setter(AccessLevel.NONE)
+//    @Setter(AccessLevel.NONE)
     private String uuidOfCar;
 
     public Car() {
