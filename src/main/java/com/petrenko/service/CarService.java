@@ -5,6 +5,12 @@ import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toCollection;
+import static java.util.stream.Collectors.toMap;
 
 public class CarService {
     private static CarService instance;
@@ -41,6 +47,91 @@ public class CarService {
         }
     }
 
+    public List<String> findManufacturerByPrice(Car[] cars, int price) {
+        System.out.println("Manufacturers of cars more expensive than:" + price);
+        return Arrays.stream(cars)
+                .filter(c -> c != null)
+                .filter(c -> c.getPrice() > price)
+                .map(Car::getManufacturer)
+                .peek(System.out::println)
+                .collect(toCollection(LinkedList::new));
+    }
+
+    public int countSum(Car[] cars) {
+        return Arrays.stream(cars)
+                .filter(c -> c != null)
+                .map(Car::getCount)
+                .reduce(0, (subtotal, element) -> subtotal + element);
+    }
+
+    public Map<String, Type> mapToMap(Car[] cars) {
+        return Arrays.stream(cars)
+                .filter(c -> c != null)
+                .sorted(Comparator.comparing(Car::getManufacturer))
+                .collect(toMap((Car::getUuidOfCar), (Car::getType), (c1, c2) -> c1, LinkedHashMap::new));
+    }
+
+    public IntSummaryStatistics statistic(Car[] cars) {
+        return Arrays.stream(cars)
+                .filter(c -> c != null)
+                .mapToInt(Car::getPrice)
+                .summaryStatistics();
+    }
+
+    public boolean priceCheck(Car[] cars, int price) {
+        Predicate<Integer> predicate = p -> p > price;
+        return Arrays.stream(cars)
+                .filter(c -> c != null)
+                .map(Car::getPrice)
+                .allMatch(predicate);
+    }
+
+    public Car mapToObject(Map<String, Object> map) {
+        if (map == null) {
+            throw new NullPointerException("Map not exist");
+        }
+
+        final Function<Map, Car> function = m -> {
+            if (m.get("type") == Type.CAR) {
+                return new PassengerCar();
+            } else if (m.get("type") == Type.TRUCK){
+                return new Truck();
+            } else {
+                throw new NullPointerException("Type of car not exist");
+            }
+        };
+
+        return function.andThen(c -> {
+                    if (map.get("manufacturer") != null) {
+                        c.setManufacturer((String) map.get("manufacturer"));
+                    }
+                    if (map.get("color") != null) {
+                        c.setColor((Color) map.get("color"));
+                    }
+                    if (map.get("count") != null) {
+                        c.setCount((int) map.get("count"));
+                    }
+                    if (map.get("price") != null) {
+                        c.setPrice((int) map.get("price"));
+                    }
+                    return c;
+                })
+                .apply(map);
+    }
+
+    public Map<Color, Long> innerList(List<List<Car>> carsLists, int price) {
+        return carsLists.stream()
+                .flatMap(l -> l.stream())
+                .filter(c -> c != null)
+                .sorted(Comparator.comparing(c -> c.getColor().toString()))
+                .peek(c -> {
+                    System.out.println(c.getColor());
+                    System.out.println(c.getUuidOfCar());
+                })
+                .filter(c -> c.getPrice() > price)
+                .collect(Collectors.groupingBy(Car::getColor, Collectors.counting()));
+    }
+
     public Map<String, Integer> mapManufacturerCount(Car[] cars) {
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < cars.length; i++) {
@@ -73,9 +164,9 @@ public class CarService {
     public void printManufacturerAndCount(final Car car) {
         Optional.ofNullable(car)
                 .ifPresent(c -> {
-            System.out.printf("Manufacturer: %s. Count: %d.%n",
-                    c.getManufacturer(), c.getCount());
-        });
+                    System.out.printf("Manufacturer: %s. Count: %d.%n",
+                            c.getManufacturer(), c.getCount());
+                });
     }
 
     public void printColor(final Car car) {
