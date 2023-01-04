@@ -96,7 +96,7 @@ public class CarService {
                 map.put(matcher.group(1), matcher.group(2));
             }
         }
-       return map;
+        return map;
     }
 
     public List<String> findManufacturerByPrice(Car[] cars, int price) {
@@ -138,50 +138,46 @@ public class CarService {
                 .allMatch(predicate);
     }
 
-    public Car mapToObject(Map<String, String> mapByXml) {
-        if (mapByXml == null) {
+    public Car mapToObject(Map<String, String> mapByFile) {
+        if (mapByFile == null) {
             throw new NullPointerException("Map not exist");
         }
 
-        final Function<Map, Car> function = m -> {
+        final Function<Map<String, String>, Car> function = m -> {
             if (m.get("type").equals("CAR")) {
                 PassengerCar passengerCar = new PassengerCar();
                 passengerCar.setEngine(new Engine(Type.CAR));
+                setFieldsOfCar(m, passengerCar);
                 return passengerCar;
             } else if (m.get("type").equals("TRUCK")) {
                 Truck truck = new Truck();
                 truck.setEngine(new Engine(Type.TRUCK));
+                setFieldsOfCar(m, truck);
                 return truck;
             } else {
                 throw new NullPointerException("Type of car not exist");
             }
         };
 
-        Car car = function.andThen(c -> {
-                    setFieldsOfCar(mapByXml, c);
-                    return c;
-                })
-                .apply(mapByXml);
-
-        return car;
+        return function.apply(mapByFile);
     }
 
-    private void setFieldsOfCar(Map<String, String> mapByXml, Car car) {
-        Optional.ofNullable(mapByXml.get("manufacturer")).
+    private void setFieldsOfCar(Map<String, String> mapByFile, Car car) {
+        Optional.ofNullable(mapByFile.get("manufacturer")).
                 ifPresent(car::setManufacturer);
-        Optional.ofNullable(mapByXml.get("power")).
+        Optional.ofNullable(mapByFile.get("power")).
                 ifPresent(s -> car.getEngine().setPower(Integer.parseInt(s)));
-        Optional.ofNullable(mapByXml.get("color")).
+        Optional.ofNullable(mapByFile.get("color")).
                 ifPresent(s -> car.setColor(Color.valueOf(s)));
-        Optional.ofNullable(mapByXml.get("count")).
+        Optional.ofNullable(mapByFile.get("count")).
                 ifPresent(s -> car.setCount(Integer.parseInt(s)));
-        Optional.ofNullable(mapByXml.get("price")).
+        Optional.ofNullable(mapByFile.get("price")).
                 ifPresent(s -> car.setPrice(Integer.parseInt(s)));
-        Optional.ofNullable(mapByXml.get("id")).
+        Optional.ofNullable(mapByFile.get("id")).
                 ifPresent(car::setUuidOfCar);
-        Optional.ofNullable(mapByXml.get("passengerCount")).
+        Optional.ofNullable(mapByFile.get("passengerCount")).
                 ifPresent(s -> ((PassengerCar) car).setPassengerCount(Integer.parseInt(s)));
-        Optional.ofNullable(mapByXml.get("loadCapacity")).
+        Optional.ofNullable(mapByFile.get("loadCapacity")).
                 ifPresent(s -> ((Truck) car).setLoadCapacity(Integer.parseInt(s)));
     }
 
