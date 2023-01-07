@@ -1,6 +1,7 @@
 package com.petrenko.service;
 
 import com.petrenko.model.*;
+import com.petrenko.repository.CarListRepository;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 import org.junit.Assert;
@@ -19,16 +20,16 @@ import static java.util.stream.Collectors.toMap;
 public class CarService {
     private static CarService instance;
     private final Random random = new Random();
-    private final CarRepository carRepository;
+    private final CarListRepository carRepository;
     private String string;
 
-    private CarService(final CarRepository carRepository) {
-        this.carRepository = carRepository;
+    private CarService(final CarListRepository carListRepository) {
+        this.carRepository = carListRepository;
     }
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(CarRepository.getInstance());
+            instance = new CarService(CarListRepository.getInstance());
         }
         return instance;
     }
@@ -344,13 +345,13 @@ public class CarService {
         return cars;
     }
 
-    public void insert(final Car car, final int indexInsertCar) {
-        carRepository.insert(car, indexInsertCar);
-    }
-
-    public void insert(final int indexInsertCar) {
-        carRepository.insert(create(), indexInsertCar);
-    }
+//    public void insert(final Car car, final int indexInsertCar) {
+//        carRepository.insert(car, indexInsertCar);
+//    }
+//
+//    public void insert(final int indexInsertCar) {
+//        carRepository.insert(create(), indexInsertCar);
+//    }
 
     public void print(final Car car) {
         if (car == null) {
@@ -385,16 +386,16 @@ public class CarService {
         System.out.println();
     }
 
-    public Car getByUuid(final String uuidOfCar) {
+    public Optional<Car> getByUuid(final String uuidOfCar) {
         return carRepository.getByUuid(uuidOfCar);
     }
 
     public void printByUuid(final String uuidOfCar) {
-        final Car car = carRepository.getByUuid(uuidOfCar);
-        if (car == null) {
-            return;
-        }
-        print(car);
+        carRepository.getByUuid(uuidOfCar).ifPresentOrElse(c ->
+                print(c),
+                () -> System.out.println("Car with ID \"" + uuidOfCar + "\" not found")
+        );
+
     }
 
     public void printAll() {
@@ -412,20 +413,20 @@ public class CarService {
         }
     }
 
-    public void updateColor(final String uuidOfCar, final Color color) {
-        carRepository.updateColor(uuidOfCar, color);
-    }
+//    public void updateColor(final String uuidOfCar, final Color color) {
+//        carRepository.updateColor(uuidOfCar, color);
+//    }
+//
+//    public void updateColorRandom(final String uuidOfCar) {
+//        carRepository.updateColorRandom(uuidOfCar);
+//    }
 
-    public void updateColorRandom(final String uuidOfCar) {
-        carRepository.updateColorRandom(uuidOfCar);
-    }
-
-    public void updatePrice(final String uuidOfCar, final int price) {
-        if (price < 0) {
-            return;
-        }
-        carRepository.updatePrice(uuidOfCar, price);
-    }
+//    public void updatePrice(final String uuidOfCar, final int price) {
+//        if (price < 0) {
+//            return;
+//        }
+//        carRepository.updatePrice(uuidOfCar, price);
+//    }
 
     public void deleteByUuid(final String uuidOfCar) {
         carRepository.deleteByUuid(uuidOfCar);
