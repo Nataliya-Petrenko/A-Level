@@ -2,6 +2,7 @@ package com.petrenko.service;
 
 import com.petrenko.model.*;
 import com.petrenko.repository.CarListRepository;
+import com.petrenko.repository.CarMapRepository;
 import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
 import org.junit.Assert;
@@ -20,16 +21,16 @@ import static java.util.stream.Collectors.toMap;
 public class CarService {
     private static CarService instance;
     private final Random random = new Random();
-    private final CarListRepository carRepository;
+    private final CarMapRepository carRepository;
     private String string;
 
-    private CarService(final CarListRepository carListRepository) {
-        this.carRepository = carListRepository;
+    private CarService(final CarMapRepository carRepository) {
+        this.carRepository = carRepository;
     }
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(CarListRepository.getInstance());
+            instance = new CarService(CarMapRepository.getInstance());
         }
         return instance;
     }

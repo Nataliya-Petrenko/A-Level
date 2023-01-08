@@ -19,6 +19,8 @@ public class Main {
 
         carService.create(10);
         carService.printAll();
+        carService.printManufacturerAndCount(null);
+        carService.printEngineInfo(carService.create());
 
     }
 

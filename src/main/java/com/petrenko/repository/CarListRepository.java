@@ -23,6 +23,9 @@ public class CarListRepository implements Crud<Car>{
 
     @Override
     public void save(Car car) {
+        if (car == null) {
+            return;
+        }
         CARS.stream()
                 .filter(carFromCars -> CHECK_ID.test(carFromCars, car.getUuidOfCar()))
                 .findAny()
