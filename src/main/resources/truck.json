@@ -1,0 +1,14 @@
+{
+  "manufacturer": "Manufacturer2",
+  "engine": [
+    {
+      "type": "TRUCK",
+      "power": "350"
+    }
+  ],
+  "color": "BLUE",
+  "count": "5",
+  "price": "7000000",
+  "id": "11121314",
+  "loadCapacity": "20000"
+}
