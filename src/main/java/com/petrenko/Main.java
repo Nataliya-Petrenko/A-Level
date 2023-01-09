@@ -17,6 +17,11 @@ public class Main {
         Car truck2 = carService.carFromFile("truck.json");
         carService.print(truck2);
 
+        carService.create(10);
+        carService.printAll();
+        carService.printManufacturerAndCount(null);
+        carService.printEngineInfo(carService.create());
+
     }
 
 

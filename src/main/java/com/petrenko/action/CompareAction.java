@@ -3,6 +3,8 @@ package com.petrenko.action;
 import com.petrenko.model.Car;
 import com.petrenko.util.UserInput;
 
+import java.util.Optional;
+
 public class CompareAction implements Action {
     @Override
     public void execute() {
@@ -18,14 +20,19 @@ public class CompareAction implements Action {
 //        }
 
         final String idOfCar1 = UserInput.getString("Write ID of car1");
-        Car car1 = CAR_SERVICE.getByUuid(idOfCar1);
+        Optional<Car> car1 = CAR_SERVICE.getByUuid(idOfCar1);
         final String idOfCar2 = UserInput.getString("Write ID of car2");
-        Car car2 = CAR_SERVICE.getByUuid(idOfCar2);
+        Optional<Car> car2 = CAR_SERVICE.getByUuid(idOfCar2);
 
-        final boolean compare = CAR_SERVICE.carEquals(car1, car2);
-        System.out.println("Current car: " + car1.getUuidOfCar());
-        System.out.println("Next car: " + car2.getUuidOfCar());
-        System.out.println("Compare: " + compare);
-        System.out.println();
+        if (!car1.isEmpty() && !car2.isEmpty()) {
+            final boolean compare = CAR_SERVICE.carEquals(car1.get(), car2.get());
+            System.out.println("Current car: " + car1.get().getUuidOfCar());
+            System.out.println("Next car: " + car2.get().getUuidOfCar());
+            System.out.println("Compare: " + compare);
+            System.out.println();
+        } else {
+            System.out.println("One or both cars not exist");
+        }
+
     }
 }

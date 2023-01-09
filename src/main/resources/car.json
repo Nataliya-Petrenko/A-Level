@@ -1,11 +1,10 @@
 {
   "manufacturer": "Manufacturer1",
-  "engine": [
+  "engine":
     {
       "type": "CAR",
       "power": "250"
-    }
-  ],
+    },
   "color": "RED",
   "count": "20",
   "price": "1000000",

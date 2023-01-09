@@ -4,7 +4,9 @@ import com.petrenko.model.Car;
 import com.petrenko.model.PassengerCar;
 import com.petrenko.model.Color;
 
-public class CarRepository implements CarRepositoryInterface<Car>{
+import java.util.Optional;
+
+public class CarRepository implements Crud<Car>{
     private static CarRepository instance;
     private static Car[] cars = new Car[10];
 
@@ -48,7 +50,7 @@ public class CarRepository implements CarRepositoryInterface<Car>{
         System.arraycopy(cars, 0, carsArray, 0, indexOfLastCar() + 1);
         return carsArray;
     }
-    public Car getByUuid(final String uuidOfCar) {
+    public Optional<Car> getByUuid(final String uuidOfCar) {
         if (uuidOfCar == null) {
             return null;
         }
@@ -56,36 +58,36 @@ public class CarRepository implements CarRepositoryInterface<Car>{
         if (indexCar == -1) {
             return null;
         }
-        return cars[indexCar];
+        return Optional.ofNullable(cars[indexCar]);
     }
-    public void updateColor(final String uuidOfCar, final Color color) {
-        final Car car = getByUuid(uuidOfCar);
-        if (car == null || color == null) {
-            return;
-        }
-        car.setColor(color);
-    }
-    public void updateColorRandom(final String uuidOfCar) {
-        final Car car = getByUuid(uuidOfCar);
-        if (car == null) {
-            return;
-        }
-        Color newColor;
-        do {
-            newColor = Color.randomColor();
-        } while (car.getColor().equals(newColor));
-        updateColor(uuidOfCar, newColor);
-    }
-    public void updatePrice(final String uuidOfCar, final int price) {
-        if (price < 0) {
-            return;
-        }
-        final Car car = getByUuid(uuidOfCar);
-        if (car == null) {
-            return;
-        }
-        getByUuid(uuidOfCar).setPrice(price);
-    }
+//    public void updateColor(final String uuidOfCar, final Color color) {
+//        final Car car = getByUuid(uuidOfCar);
+//        if (car == null || color == null) {
+//            return;
+//        }
+//        car.setColor(color);
+//    }
+//    public void updateColorRandom(final String uuidOfCar) {
+//        final Car car = getByUuid(uuidOfCar);
+//        if (car == null) {
+//            return;
+//        }
+//        Color newColor;
+//        do {
+//            newColor = Color.randomColor();
+//        } while (car.getColor().equals(newColor));
+//        updateColor(uuidOfCar, newColor);
+//    }
+//    public void updatePrice(final String uuidOfCar, final int price) {
+//        if (price < 0) {
+//            return;
+//        }
+//        final Car car = getByUuid(uuidOfCar);
+//        if (car == null) {
+//            return;
+//        }
+//        getByUuid(uuidOfCar).setPrice(price);
+//    }
     public void deleteByUuid(final String uuidOfCar) {
         if (uuidOfCar == null) {
             return;
