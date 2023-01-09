@@ -90,9 +90,9 @@ public class CarService {
     private Map<String, String> putMatchedPairToMapFromInput(InputStream input, String regex) {
         Map<String, String> map = new HashMap<>();
         Scanner scanner = new Scanner(input);
+        Pattern pattern = Pattern.compile(regex);
         while (scanner.hasNext()) {
             String s = scanner.nextLine();
-            Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(s);
             if (matcher.find()) {
                 map.put(matcher.group(1), matcher.group(2));
