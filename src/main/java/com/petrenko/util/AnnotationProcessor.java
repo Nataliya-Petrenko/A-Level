@@ -64,7 +64,6 @@ public class AnnotationProcessor {
 
     private Class<?> getRepositoryClassFromAutowired(Constructor serviceConstructor) {
         Autowired annotation = serviceConstructor.getDeclaredAnnotation(Autowired.class);
-        System.out.println(annotation.typeOfRepository());
         Class<?> repositoryClass = null;
         switch (annotation.typeOfRepository()) {
             case LIST -> repositoryClass = CarListRepository.class;

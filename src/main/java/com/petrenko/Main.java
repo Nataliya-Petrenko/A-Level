@@ -2,13 +2,13 @@ package com.petrenko;
 
 import com.petrenko.model.Car;
 import com.petrenko.service.CarService;
+import com.petrenko.util.AnnotationProcessor;
 
 public class Main {
     public static void main(String[] args) {
+        new AnnotationProcessor();
 
         CarService carService = CarService.getInstance();
-
-        System.out.println();
 
         Car car1 = carService.carFromFile("car.xml");
         carService.print(car1);

@@ -33,7 +33,7 @@ public class CarService {
     }
 
     public static CarService getInstance() {
-        if (instance == null) {                                             // Do I need it yet?
+        if (instance == null) {
             instance = new CarService(CarMapRepository.getInstance());
         }
         return instance;
