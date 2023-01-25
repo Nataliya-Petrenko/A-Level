@@ -8,6 +8,8 @@ public class Main {
 
         CarService carService = CarService.getInstance();
 
+        System.out.println();
+
         Car car1 = carService.carFromFile("car.xml");
         carService.print(car1);
         Car car2 = carService.carFromFile("car.json");

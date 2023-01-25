@@ -1,10 +1,13 @@
 package com.petrenko.repository;
 
+import com.petrenko.annotations.Singleton;
 import com.petrenko.model.Car;
+import com.petrenko.util.AnnotationProcessor;
 
 import java.util.*;
 import java.util.function.BiPredicate;
 
+@Singleton
 public class CarMapRepository implements Crud<Car> {
     private static CarMapRepository instance;
     private static final Map<String, Car> CARS = new HashMap<>();
