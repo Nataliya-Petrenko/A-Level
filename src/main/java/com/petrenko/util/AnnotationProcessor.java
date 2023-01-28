@@ -19,7 +19,6 @@ public class AnnotationProcessor {
 
     public AnnotationProcessor() {
         classSetSingleton.stream()
-                .filter(c -> CHASE_SINGLETON.get(c) == null)
                 .forEach(c -> {
                     Optional<Object> objectOfClass = createObjectOfClass(c);
                     objectOfClass.ifPresent(o -> {
@@ -49,7 +48,8 @@ public class AnnotationProcessor {
     }
 
     private Object getServiceObject(Constructor serviceConstructor) {
-        Class<?> repositoryClass = getRepositoryClassFromAutowired(serviceConstructor);
+        Autowired annotation = serviceConstructor.getDeclaredAnnotation(Autowired.class);
+        Class<?> repositoryClass = annotation.classOfRepository();
         Object object;
         try {
             Constructor repositoryConstructor = repositoryClass.getDeclaredConstructor();
@@ -60,17 +60,6 @@ public class AnnotationProcessor {
             throw new RuntimeException(e);
         }
         return object;
-    }
-
-    private Class<?> getRepositoryClassFromAutowired(Constructor serviceConstructor) {
-        Autowired annotation = serviceConstructor.getDeclaredAnnotation(Autowired.class);
-        Class<?> repositoryClass = null;
-        switch (annotation.typeOfRepository()) {
-            case LIST -> repositoryClass = CarListRepository.class;
-            case ARRAY -> repositoryClass = CarRepository.class;
-            case MAP -> repositoryClass = CarMapRepository.class;
-        }
-        return repositoryClass;
     }
 
     private void setObjectToInstanceField(Class<?> aclass, Object object) {

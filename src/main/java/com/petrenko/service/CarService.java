@@ -3,10 +3,8 @@ package com.petrenko.service;
 import com.petrenko.annotations.Autowired;
 import com.petrenko.annotations.Singleton;
 import com.petrenko.repository.Crud;
-import com.petrenko.repository.TypeRepository;
 import com.petrenko.model.*;
 import com.petrenko.repository.CarMapRepository;
-import com.petrenko.util.AnnotationProcessor;
 import com.petrenko.util.RandomGenerator;
 
 import java.io.*;
@@ -27,7 +25,7 @@ public class CarService {
     private final Crud<Car> carRepository;
     private String string;
 
-    @Autowired(typeOfRepository = TypeRepository.MAP)
+    @Autowired(classOfRepository = CarMapRepository.class)
     private CarService(final Crud<Car> carRepository) {
         this.carRepository = carRepository;
     }
