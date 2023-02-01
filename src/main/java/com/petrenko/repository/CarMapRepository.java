@@ -39,10 +39,10 @@ public class CarMapRepository implements Crud<Car> {
     }
 
     @Override
-    public Car[] getAll() {
+    public List<Car> getAll() {
         return CARS
                 .values()
-                .toArray(new Car[0]);
+                .stream().toList();
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.petrenko.annotations.Singleton;
 import com.petrenko.model.Car;
 import com.petrenko.util.AnnotationProcessor;
 
+import java.util.List;
 import java.util.Optional;
 
 @Singleton
@@ -46,10 +47,8 @@ public class CarRepository implements Crud<Car>{
                 indexOfLastCar() - indexInsertCar + 1);
         cars[indexInsertCar] = car;
     }
-    public Car[] getAll() {
-        final Car[] carsArray = new Car[indexOfLastCar() + 1];
-        System.arraycopy(cars, 0, carsArray, 0, indexOfLastCar() + 1);
-        return carsArray;
+    public List<Car> getAll() {
+        return List.of(cars);
     }
     public Optional<Car> getByUuid(final String uuidOfCar) {
         if (uuidOfCar == null) {

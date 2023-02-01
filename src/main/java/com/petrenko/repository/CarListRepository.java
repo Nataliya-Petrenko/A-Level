@@ -41,8 +41,8 @@ public class CarListRepository implements Crud<Car>{
     }
 
     @Override
-    public Car[] getAll() {
-        return CARS.toArray(new Car[0]);
+    public List<Car> getAll() {
+        return CARS;
     }
 
     @Override

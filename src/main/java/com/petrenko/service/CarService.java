@@ -5,6 +5,7 @@ import com.petrenko.annotations.Singleton;
 import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
 import com.petrenko.repository.CarMapRepository;
+import com.petrenko.repository.JdbcCarRepository;
 import com.petrenko.util.RandomGenerator;
 
 import java.io.*;
@@ -25,14 +26,14 @@ public class CarService {
     private final Crud<Car> carRepository;
     private String string;
 
-    @Autowired(classOfRepository = CarMapRepository.class)
+    @Autowired(classOfRepository = JdbcCarRepository.class)
     private CarService(final Crud<Car> carRepository) {
         this.carRepository = carRepository;
     }
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(CarMapRepository.getInstance());
+            instance = new CarService(JdbcCarRepository.getInstance());
         }
         return instance;
     }

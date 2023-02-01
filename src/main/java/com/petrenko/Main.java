@@ -1,28 +1,22 @@
 package com.petrenko;
 
-import com.petrenko.model.Car;
+import com.petrenko.repository.JdbcCarRepository;
+import com.petrenko.repository.JdbcOrderRepository;
 import com.petrenko.service.CarService;
-import com.petrenko.util.AnnotationProcessor;
+import com.petrenko.service.OrderService;
 
 public class Main {
     public static void main(String[] args) {
-        new AnnotationProcessor();
 
-        CarService carService = CarService.getInstance();
+        JdbcOrderRepository.dropTable();
+        JdbcCarRepository.dropTable();
 
-        Car car1 = carService.carFromFile("car.xml");
-        carService.print(car1);
-        Car car2 = carService.carFromFile("car.json");
-        carService.print(car2);
-        Car truck1 = carService.carFromFile("truck.xml");
-        carService.print(truck1);
-        Car truck2 = carService.carFromFile("truck.json");
-        carService.print(truck2);
+        System.out.println();
 
-        carService.create(10);
-        carService.printAll();
-        carService.printManufacturerAndCount(null);
-        carService.printEngineInfo(carService.create());
+        OrderService orderService = OrderService.getInstance();
+        orderService.create(3);
+        orderService.printAll();
+
 
     }
 
