@@ -13,8 +13,8 @@ class CarServiceTest {
     private CarRepository repository;
     private RandomGenerator randomGenerator;
     private Car car;
-/*
-    @BeforeEach
+
+/*    @BeforeEach
     void setUp() {
         repository = Mockito.mock(CarRepository.class);
         randomGenerator = Mockito.mock(RandomGenerator.class);

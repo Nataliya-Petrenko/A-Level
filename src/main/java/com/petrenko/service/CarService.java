@@ -1,11 +1,11 @@
 package com.petrenko.service;
 
+import com.petrenko.annotations.Autowired;
+import com.petrenko.annotations.Singleton;
+import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
-import com.petrenko.repository.CarListRepository;
 import com.petrenko.repository.CarMapRepository;
-import com.petrenko.repository.CarRepository;
 import com.petrenko.util.RandomGenerator;
-import org.junit.Assert;
 
 import java.io.*;
 import java.util.*;
@@ -18,13 +18,15 @@ import java.util.stream.Collectors;
 import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toMap;
 
+@Singleton
 public class CarService {
     private static CarService instance;
     private final Random random = new Random();
-    private final CarMapRepository carRepository;
+    private final Crud<Car> carRepository;
     private String string;
 
-    private CarService(final CarMapRepository carRepository) {
+    @Autowired(classOfRepository = CarMapRepository.class)
+    private CarService(final Crud<Car> carRepository) {
         this.carRepository = carRepository;
     }
 
@@ -393,7 +395,7 @@ public class CarService {
 
     public void printByUuid(final String uuidOfCar) {
         carRepository.getByUuid(uuidOfCar).ifPresentOrElse(c ->
-                print(c),
+                        print(c),
                 () -> System.out.println("Car with ID \"" + uuidOfCar + "\" not found")
         );
 

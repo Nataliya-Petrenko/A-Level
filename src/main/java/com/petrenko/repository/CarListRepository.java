@@ -1,12 +1,17 @@
 package com.petrenko.repository;
 
+import com.petrenko.annotations.Autowired;
+import com.petrenko.annotations.Singleton;
 import com.petrenko.model.Car;
+import com.petrenko.service.CarService;
+import com.petrenko.util.AnnotationProcessor;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiPredicate;
 
+@Singleton
 public class CarListRepository implements Crud<Car>{
     private static CarListRepository instance;
     private static final List<Car> CARS = new LinkedList<>();

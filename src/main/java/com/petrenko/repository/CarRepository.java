@@ -1,11 +1,12 @@
 package com.petrenko.repository;
 
+import com.petrenko.annotations.Singleton;
 import com.petrenko.model.Car;
-import com.petrenko.model.PassengerCar;
-import com.petrenko.model.Color;
+import com.petrenko.util.AnnotationProcessor;
 
 import java.util.Optional;
 
+@Singleton
 public class CarRepository implements Crud<Car>{
     private static CarRepository instance;
     private static Car[] cars = new Car[10];
