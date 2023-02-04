@@ -1,8 +1,8 @@
 package com.petrenko;
 
 import com.petrenko.repository.JdbcCarRepository;
+import com.petrenko.repository.JdbcEngineRepository;
 import com.petrenko.repository.JdbcOrderRepository;
-import com.petrenko.service.CarService;
 import com.petrenko.service.OrderService;
 
 public class Main {
@@ -10,6 +10,11 @@ public class Main {
 
         JdbcOrderRepository.dropTable();
         JdbcCarRepository.dropTable();
+        JdbcEngineRepository.dropTable();
+
+        JdbcEngineRepository.getInstance();
+        JdbcCarRepository.getInstance();
+        JdbcOrderRepository.getInstance();
 
         System.out.println();
 

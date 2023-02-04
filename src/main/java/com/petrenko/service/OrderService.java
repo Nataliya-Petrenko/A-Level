@@ -3,7 +3,6 @@ package com.petrenko.service;
 import com.petrenko.model.Car;
 import com.petrenko.model.Order;
 import com.petrenko.repository.Crud;
-import com.petrenko.repository.JdbcCarRepository;
 import com.petrenko.repository.JdbcOrderRepository;
 
 import java.util.Arrays;

@@ -28,12 +28,13 @@ public class JdbcCarRepository implements Crud<Car> {
 
     @SneakyThrows
     private static void createTable() {
-        String stringSql = "CREATE TABLE IF NOT EXISTS Engine" +
-                "(" +
-                "id_engine VARCHAR NOT NULL PRIMARY KEY," +
-                "power INTEGER NOT NULL," +
-                "type_engine VARCHAR NOT NULL" +
-                ");" +
+        String stringSql =
+//                "CREATE TABLE IF NOT EXISTS Engine" +
+//                "(" +
+//                "id_engine VARCHAR NOT NULL PRIMARY KEY," +
+//                "power INTEGER NOT NULL," +
+//                "type_engine VARCHAR NOT NULL" +
+//                ");" +
 
                 "CREATE TABLE IF NOT EXISTS Car" +
                 "(" +
@@ -66,13 +67,13 @@ public class JdbcCarRepository implements Crud<Car> {
         final Connection connection = JdbcManager.getConnection();
         connection.setAutoCommit(false);
 
-        String prepareEngine = "INSERT INTO Engine(id_engine, power, type_engine) VALUES (?, ?, ?)";
-        PreparedStatement preparedStatementEngine = connection.prepareStatement(prepareEngine);
-        preparedStatementEngine.setString(1, car.getEngine().getId());
-        preparedStatementEngine.setInt(2, car.getEngine().getPower());
-        preparedStatementEngine.setString(3, car.getEngine().getType().toString());
-        preparedStatementEngine.executeUpdate();
-        preparedStatementEngine.close();
+//        String prepareEngine = "INSERT INTO Engine(id_engine, power, type_engine) VALUES (?, ?, ?)";  // TODO Для этого должен быть отдельный репозиторий
+//        PreparedStatement preparedStatementEngine = connection.prepareStatement(prepareEngine);
+//        preparedStatementEngine.setString(1, car.getEngine().getId());
+//        preparedStatementEngine.setInt(2, car.getEngine().getPower());
+//        preparedStatementEngine.setString(3, car.getEngine().getType().toString());
+//        preparedStatementEngine.executeUpdate();
+//        preparedStatementEngine.close();
 
         String prepareCar = "INSERT INTO Car(id_car, manufacturer, id_engine, color, count, price) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement preparedStatementCar = connection.prepareStatement(prepareCar);

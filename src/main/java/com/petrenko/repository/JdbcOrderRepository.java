@@ -79,24 +79,20 @@ public class JdbcOrderRepository implements Crud<Order> {
 
         final Connection connection = JdbcManager.getConnection();
         final Statement statement = connection.createStatement();
-        connection.setAutoCommit(false);
 
         final ResultSet resultSet = statement.executeQuery(stringSql);
 
         List<Order> list = new LinkedList<>();
         while (resultSet.next()) {
             String id = resultSet.getString("id_order");
-            Map<String, Object> map = getOrderMap(connection, id);
-            List<String> listIdOfCars = listIdOfCars(connection, id);
-            Order order = MapToObject.createOrder(map, listOfCars(listIdOfCars)).get();
-            list.add(order);
+            getByUuid(id).ifPresent(list::add);
         }
 
         statement.close();
-        connection.setAutoCommit(true);
         connection.close();
 
         return list;
+
     }
 
     @SneakyThrows

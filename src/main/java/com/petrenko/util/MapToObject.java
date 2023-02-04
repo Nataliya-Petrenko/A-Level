@@ -24,7 +24,6 @@ public class MapToObject {
 
     private static Optional<Car> createPassengerCar(Map<String, String> map){
         PassengerCar passengerCar = new PassengerCar();
-        passengerCar.setEngine(new Engine(Type.CAR));
         passengerCar.setPassengerCount(Integer.parseInt(map.get("passenger_count")));
         setFieldsOfCar(map, passengerCar);
         return Optional.of(passengerCar);
@@ -32,20 +31,35 @@ public class MapToObject {
 
     private static Optional<Car> createTruck(Map<String, String> map){
         Truck truck = new Truck();
-        truck.setEngine(new Engine(Type.TRUCK));
         truck.setLoadCapacity(Integer.parseInt(map.get("load_capacity")));
         setFieldsOfCar(map, truck);
         return Optional.of(truck);
     }
 
     private static void setFieldsOfCar(Map<String, String> map, Car car) {
-        car.getEngine().setId(map.get("id_engine"));
-        car.getEngine().setPower(Integer.parseInt(map.get("power")));
+        createEngine(map).ifPresent(car::setEngine);
         car.setUuidOfCar(map.get("id_car"));
         car.setManufacturer(map.get("manufacturer"));
         car.setColor(Color.valueOf(map.get("color")));
         car.setCount(Integer.parseInt(map.get("count")));
         car.setPrice(Integer.parseInt(map.get("price")));
+    }
+
+    public static Optional<Engine> createEngine(Map<String, String> map) {
+        if (map == null) {
+            return Optional.empty();
+        }
+        Engine engine = new Engine();
+        engine.setId(map.get("id_engine"));
+        engine.setPower(Integer.parseInt(map.get("power")));
+        if (map.get("type_engine").equals("CAR")) {
+            engine.setType(Type.CAR);
+        } else if (map.get("type_engine").equals("TRUCK")) {
+            engine.setType(Type.TRUCK);
+        } else {
+            throw new NullPointerException("Type of car not exist");
+        }
+        return Optional.of(engine);
     }
 
     public static Optional<Order> createOrder(Map<String, Object> map, List<Car> listOfCars) {
