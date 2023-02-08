@@ -3,6 +3,7 @@ package com.petrenko.service;
 import com.petrenko.model.Engine;
 import com.petrenko.model.Type;
 import com.petrenko.repository.Crud;
+import com.petrenko.repository.HibernateRepository.HibernateEngineRepository;
 import com.petrenko.repository.JdbcEngineRepository;
 
 import java.util.*;
@@ -17,7 +18,7 @@ public class EngineService {
 
     public static EngineService getInstance() {
         if (instance == null) {
-            instance = new EngineService(JdbcEngineRepository.getInstance());
+            instance = new EngineService(HibernateEngineRepository.getInstance());
         }
         return instance;
     }

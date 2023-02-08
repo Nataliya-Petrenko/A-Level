@@ -1,29 +1,28 @@
 package com.petrenko;
 
-import com.petrenko.repository.JdbcCarRepository;
-import com.petrenko.repository.JdbcEngineRepository;
-import com.petrenko.repository.JdbcOrderRepository;
+import com.petrenko.config.HibernateFactoryUtil;
+import com.petrenko.model.*;
 import com.petrenko.service.OrderService;
 
 public class Main {
     public static void main(String[] args) {
 
-        JdbcOrderRepository.dropTable();
-        JdbcCarRepository.dropTable();
-        JdbcEngineRepository.dropTable();
-
-        JdbcEngineRepository.getInstance();
-        JdbcCarRepository.getInstance();
-        JdbcOrderRepository.getInstance();
-
-        System.out.println();
-
+        HibernateFactoryUtil.getSessionFactory();
         OrderService orderService = OrderService.getInstance();
-        orderService.create(3);
+        orderService.create(5);
         orderService.printAll();
+        String id = orderService.getAll()
+                .stream()
+                .findFirst()
+                .map(Order::getId)
+                .get();
 
+        System.out.println("Delete: " + id);
+        orderService.deleteById(id);
+
+        orderService.printAll();
 
     }
 
-
 }
+

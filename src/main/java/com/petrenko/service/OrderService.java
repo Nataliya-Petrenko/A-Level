@@ -3,11 +3,13 @@ package com.petrenko.service;
 import com.petrenko.model.Car;
 import com.petrenko.model.Order;
 import com.petrenko.repository.Crud;
+import com.petrenko.repository.HibernateRepository.HibernateOrderRepository;
 import com.petrenko.repository.JdbcOrderRepository;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderService {
     private static OrderService instance;
@@ -19,14 +21,15 @@ public class OrderService {
 
     public static OrderService getInstance() {
         if (instance == null) {
-            instance = new OrderService(JdbcOrderRepository.getInstance());
+            instance = new OrderService(HibernateOrderRepository.getInstance());
         }
         return instance;
     }
 
     public Order create() {
-        List<Car> listOfCars = Arrays.asList(CarService.getInstance().create((int) (Math.random() * 10)));
+        List<Car> listOfCars = Arrays.asList(CarService.getInstance().create((int) (Math.random() * 10 + 1)));
         Order order = new Order(listOfCars);
+        listOfCars.forEach(c -> c.getOrders().add(order));
         orderRepository.save(order);
         return order;
     }
@@ -37,9 +40,7 @@ public class OrderService {
         }
         List<Order> listOfOrders = new LinkedList<>();
         for (int i = 0; i < numberOfOrders; i++) {
-            List<Car> listOfCars = Arrays.asList(CarService.getInstance().create((int) (Math.random() * 10)));
-            Order order = new Order(listOfCars);
-            orderRepository.save(order);
+            Order order = create();
             listOfOrders.add(order);
         }
         return listOfOrders;
@@ -49,6 +50,10 @@ public class OrderService {
         orderRepository.deleteByUuid(id);
     }
 
+    public Optional<Order> getByID(String id) {
+        return orderRepository.getByUuid(id);
+    }
+
     public void printByID(String id) {
         System.out.println(orderRepository.getByUuid(id));
     }
@@ -56,5 +61,10 @@ public class OrderService {
     public void printAll() {
         orderRepository.getAll().forEach(System.out::println);
     }
+
+    public List<Order> getAll() {
+        return orderRepository.getAll();
+    }
+
 
 }

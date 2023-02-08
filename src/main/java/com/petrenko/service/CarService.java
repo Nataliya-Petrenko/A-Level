@@ -4,6 +4,7 @@ import com.petrenko.annotations.Autowired;
 import com.petrenko.annotations.Singleton;
 import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
+import com.petrenko.repository.HibernateRepository.HibernateCarRepository;
 import com.petrenko.repository.JdbcCarRepository;
 import com.petrenko.util.RandomGenerator;
 
@@ -31,7 +32,7 @@ public class CarService {
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(JdbcCarRepository.getInstance());
+            instance = new CarService(HibernateCarRepository.getInstance());
         }
         return instance;
     }
