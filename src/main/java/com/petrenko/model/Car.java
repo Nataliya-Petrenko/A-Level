@@ -19,7 +19,6 @@ public abstract class Car implements CountRestore {
     private int price;
     private Type type;
 
-//    @Setter(AccessLevel.NONE)
     private String uuidOfCar;
 
     public Car() {
@@ -39,7 +38,15 @@ public abstract class Car implements CountRestore {
 
     @Override
     public String toString() {
-        return "UUID: " + uuidOfCar;
+        return "Car{" +
+                ", uuidOfCar='" + uuidOfCar +
+                "manufacturer='" + manufacturer + '\'' +
+                ", engine=" + engine +
+                ", color=" + color +
+                ", count=" + count +
+                ", price=" + price +
+                ", type=" + type + '\'' +
+                '}';
     }
 
     @Override

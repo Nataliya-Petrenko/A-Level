@@ -4,7 +4,7 @@ import com.petrenko.annotations.Autowired;
 import com.petrenko.annotations.Singleton;
 import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
-import com.petrenko.repository.CarMapRepository;
+import com.petrenko.repository.JdbcCarRepository;
 import com.petrenko.util.RandomGenerator;
 
 import java.io.*;
@@ -23,16 +23,15 @@ public class CarService {
     private static CarService instance;
     private final Random random = new Random();
     private final Crud<Car> carRepository;
-    private String string;
-
-    @Autowired(classOfRepository = CarMapRepository.class)
+    private final EngineService engineService = EngineService.getInstance();
+    @Autowired(classOfRepository = JdbcCarRepository.class)
     private CarService(final Crud<Car> carRepository) {
         this.carRepository = carRepository;
     }
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(CarMapRepository.getInstance());
+            instance = new CarService(JdbcCarRepository.getInstance());
         }
         return instance;
     }
@@ -311,9 +310,9 @@ public class CarService {
             return null;
         }
         if (type.equals(Type.CAR)) {
-            car = new PassengerCar(randomText(5), new Engine(type), Color.randomColor());
+            car = new PassengerCar(randomText(5), engineService.createAndSave(type), Color.randomColor());
         } else if (type.equals(Type.TRUCK)) {
-            car = new Truck(randomText(5), new Engine(type), Color.randomColor());
+            car = new Truck(randomText(5), engineService.createAndSave(type), Color.randomColor());
         } else {
             car = null;
         }
