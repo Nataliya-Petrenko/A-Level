@@ -5,6 +5,8 @@ import com.petrenko.model.Order;
 import com.petrenko.repository.Crud;
 import com.petrenko.repository.HibernateRepository.HibernateOrderRepository;
 import com.petrenko.repository.JdbcOrderRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -15,6 +17,8 @@ public class OrderService {
     private static OrderService instance;
     private final Crud<Order> orderRepository;
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(OrderService.class);
+
     private OrderService(final Crud<Order> orderRepository) {
         this.orderRepository = orderRepository;
     }
@@ -22,6 +26,7 @@ public class OrderService {
     public static OrderService getInstance() {
         if (instance == null) {
             instance = new OrderService(HibernateOrderRepository.getInstance());
+            LOGGER.info("OrderService was created");
         }
         return instance;
     }
@@ -31,6 +36,7 @@ public class OrderService {
         Order order = new Order(listOfCars);
         listOfCars.forEach(c -> c.getOrders().add(order));
         orderRepository.save(order);
+        LOGGER.info("Order was created: {}", order.getId());
         return order;
     }
 

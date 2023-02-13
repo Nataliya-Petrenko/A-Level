@@ -15,7 +15,6 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "car_type")
 public abstract class Car implements CountRestore {
     private String manufacturer;
     @OneToOne(cascade = CascadeType.PERSIST)

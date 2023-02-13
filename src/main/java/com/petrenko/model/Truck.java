@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 @Setter
 @Getter
 @Entity
-@DiscriminatorValue("truck")
 public class Truck extends Car {
 
     private int loadCapacity;

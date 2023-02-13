@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "passenger_car")
-@DiscriminatorValue("passenger_car")
 public class PassengerCar extends Car {
 
     private int passengerCount;

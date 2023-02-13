@@ -9,7 +9,7 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">false</property>
 
         <mapping class="com.petrenko.model.Engine"/>
@@ -17,6 +17,5 @@
         <mapping class="com.petrenko.model.Truck"/>
         <mapping class="com.petrenko.model.PassengerCar"/>
         <mapping class="com.petrenko.model.Order"/>
-
     </session-factory>
 </hibernate-configuration>
