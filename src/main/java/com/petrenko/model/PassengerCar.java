@@ -6,6 +6,7 @@ import lombok.Setter;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -26,6 +27,11 @@ public class PassengerCar extends Car {
         super(manufacturer, engine, color);
         this.passengerCount = passengerCount;
         this.setType(Type.CAR);
+    }
+
+    public PassengerCar(String manufacturer, Engine engine, Color color, int count, int price, Type type, String uuidOfCar, Set<Order> orders, int passengerCount) {
+        super(manufacturer, engine, color, count, price, type, uuidOfCar, orders);
+        this.passengerCount = passengerCount;
     }
 
     @Override

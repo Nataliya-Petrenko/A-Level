@@ -2,6 +2,7 @@ package com.petrenko.service;
 
 import com.petrenko.annotations.Autowired;
 import com.petrenko.annotations.Singleton;
+import com.petrenko.factory.CarFactory;
 import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
 import com.petrenko.repository.HibernateRepository.HibernateCarRepository;
@@ -29,6 +30,7 @@ public class CarService {
     private final EngineService engineService = EngineService.getInstance();
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CarService.class);
+    private final CarFactory carFactory = new CarFactory();
 
     @Autowired(classOfRepository = JdbcCarRepository.class)
     private CarService(final Crud<Car> carRepository) {
@@ -62,6 +64,11 @@ public class CarService {
         }
     }
 
+    public Optional<Car> createByCarFactory(Type type) {
+        Optional<Car> car = carFactory.create(type);
+        car.ifPresent(carRepository::save);
+        return car;
+    }
     public Car carFromFile(String file) {
         Map<String, String> map;
         if (file.endsWith(".xml")) {

@@ -58,6 +58,17 @@ public abstract class Car implements CountRestore {
 //        this.type = type;
     }
 
+    public Car(String manufacturer, Engine engine, Color color, int count, int price, Type type, String uuidOfCar, Set<Order> orders) {
+        this.manufacturer = manufacturer;
+        this.engine = engine;
+        this.color = color;
+        this.count = count;
+        this.price = price;
+        this.type = type;
+        this.uuidOfCar = uuidOfCar;
+        this.orders = orders;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
