@@ -17,17 +17,8 @@ import java.time.format.DateTimeFormatter;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, JoranException {
 
-        startLogger();
         hibernate();
 
-    }
-
-    private static void startLogger() throws FileNotFoundException, JoranException {
-        LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        loggerContext.reset();
-        JoranConfigurator configurator = new JoranConfigurator();
-        configurator.setContext(loggerContext);
-        configurator.doConfigure(new FileInputStream("src/main/java/com/petrenko/logback.xml"));
     }
 
     private static void hibernate() {
