@@ -5,6 +5,7 @@ import com.petrenko.model.Order;
 import com.petrenko.repository.Crud;
 import com.petrenko.repository.HibernateRepository.HibernateOrderRepository;
 import com.petrenko.repository.JdbcOrderRepository;
+import com.petrenko.repository.mongo.MongoOrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +26,7 @@ public class OrderService {
 
     public static OrderService getInstance() {
         if (instance == null) {
-            instance = new OrderService(HibernateOrderRepository.getInstance());
+            instance = new OrderService(MongoOrderRepository.getInstance());
             LOGGER.info("OrderService was created");
         }
         return instance;
