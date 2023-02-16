@@ -2,10 +2,15 @@ package com.petrenko.service;
 
 import com.petrenko.annotations.Autowired;
 import com.petrenko.annotations.Singleton;
+import com.petrenko.factory.CarFactory;
 import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
+import com.petrenko.repository.HibernateRepository.HibernateCarRepository;
 import com.petrenko.repository.JdbcCarRepository;
+import com.petrenko.repository.mongo.MongoCarRepository;
 import com.petrenko.util.RandomGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.*;
@@ -24,6 +29,10 @@ public class CarService {
     private final Random random = new Random();
     private final Crud<Car> carRepository;
     private final EngineService engineService = EngineService.getInstance();
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CarService.class);
+    private final CarFactory carFactory = new CarFactory();
+
     @Autowired(classOfRepository = JdbcCarRepository.class)
     private CarService(final Crud<Car> carRepository) {
         this.carRepository = carRepository;
@@ -31,30 +40,36 @@ public class CarService {
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(JdbcCarRepository.getInstance());
+            instance = new CarService(MongoCarRepository.getInstance());
+            LOGGER.info("CarService was created");
         }
         return instance;
     }
 
     public static void check(final Car car) {
         if (car == null) {
-            System.out.println("Car is null");
+            LOGGER.info("Car is null");
             return;
         }
         final boolean checkCount = car.getCount() > 0;
         final boolean checkPower = car.getEngine().getPower() > 200;
         if (checkCount && checkPower) {
-            System.out.println("Car is fully ready for sell.");
+            LOGGER.info("Car is fully ready for sell: {}. ", car.getUuidOfCar());
             return;
         }
         if (!checkCount) {
-            System.out.print("Count <= 0. ");
+            LOGGER.info("Count <= 0: {}. ", car.getUuidOfCar());
         }
         if (!checkPower) {
-            System.out.println("Power <= 200.");
+            LOGGER.info("Power <= 200: {}.", car.getUuidOfCar());
         }
     }
 
+    public Optional<Car> createByCarFactory(Type type) {
+        Optional<Car> car = carFactory.create(type);
+        car.ifPresent(carRepository::save);
+        return car;
+    }
     public Car carFromFile(String file) {
         Map<String, String> map;
         if (file.endsWith(".xml")) {
@@ -103,12 +118,12 @@ public class CarService {
     }
 
     public List<String> findManufacturerByPrice(Car[] cars, int price) {
-        System.out.println("Manufacturers of cars more expensive than:" + price);
+        LOGGER.info("Manufacturers of cars more expensive than: {}", price);
         return Arrays.stream(cars)
                 .filter(c -> c != null)
                 .filter(c -> c.getPrice() > price)
                 .map(Car::getManufacturer)
-                .peek(System.out::println)
+                .peek(LOGGER::info)
                 .collect(toCollection(LinkedList::new));
     }
 
@@ -317,6 +332,7 @@ public class CarService {
             car = null;
         }
         carRepository.save(car);
+        LOGGER.info("Car was crated: {}", car.getUuidOfCar());
         return car;
     }
 
@@ -398,6 +414,10 @@ public class CarService {
                 () -> System.out.println("Car with ID \"" + uuidOfCar + "\" not found")
         );
 
+    }
+
+    public List<Car> getAll() {
+        return carRepository.getAll();
     }
 
     public void printAll() {

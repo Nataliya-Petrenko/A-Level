@@ -3,7 +3,9 @@ package com.petrenko.service;
 import com.petrenko.model.Engine;
 import com.petrenko.model.Type;
 import com.petrenko.repository.Crud;
+import com.petrenko.repository.HibernateRepository.HibernateEngineRepository;
 import com.petrenko.repository.JdbcEngineRepository;
+import com.petrenko.repository.mongo.MongoEngineRepository;
 
 import java.util.*;
 
@@ -17,7 +19,7 @@ public class EngineService {
 
     public static EngineService getInstance() {
         if (instance == null) {
-            instance = new EngineService(JdbcEngineRepository.getInstance());
+            instance = new EngineService(MongoEngineRepository.getInstance());
         }
         return instance;
     }
@@ -54,6 +56,9 @@ public class EngineService {
 
     public Optional<Engine> getByUuid(String id) {
         return engineRepository.getByUuid(id);
+    }
+    public void deleteById (String id) {
+        engineRepository.deleteByUuid(id);
     }
 
 }

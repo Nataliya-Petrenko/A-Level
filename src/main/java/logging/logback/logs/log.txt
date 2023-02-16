@@ -1,0 +1,526 @@
+2023-02-15 00:00:56,975 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:00:57,022 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:00:57,038 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0498d9d7d83121b85ac7', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:362}] to localhost:27017
+2023-02-15 00:00:57,041 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0498d9d7d83121b85ac7', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1971200}
+2023-02-15 00:00:57,055 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:363}] to localhost:27017
+2023-02-15 00:01:11,326 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:01:11,359 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:01:11,380 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec04a71fa3b905a0bcb1ea', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:364}] to localhost:27017
+2023-02-15 00:01:11,384 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec04a71fa3b905a0bcb1ea', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2363200}
+2023-02-15 00:01:11,397 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:365}] to localhost:27017
+2023-02-15 00:36:18,158 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:36:18,197 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:36:18,216 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0ce1bd09d5492e6945a5', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:366}] to localhost:27017
+2023-02-15 00:36:18,221 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0ce1bd09d5492e6945a5', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3236700}
+2023-02-15 00:36:18,232 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:367}] to localhost:27017
+2023-02-15 00:36:18,273 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:36:39,712 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:36:39,741 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:36:39,760 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0cf7919bec59c5c78edb', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:368}] to localhost:27017
+2023-02-15 00:36:39,765 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0cf7919bec59c5c78edb', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3145500}
+2023-02-15 00:36:39,777 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:369}] to localhost:27017
+2023-02-15 00:36:39,817 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:39:55,480 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:39:55,512 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:39:55,528 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0dbbfa0ea34c93c9e5d1', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:370}] to localhost:27017
+2023-02-15 00:39:55,533 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0dbbfa0ea34c93c9e5d1', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3477100}
+2023-02-15 00:39:55,546 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:371}] to localhost:27017
+2023-02-15 00:39:55,584 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:40:29,485 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:40:29,519 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:40:29,536 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0ddd9132486077832316', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:372}] to localhost:27017
+2023-02-15 00:40:29,540 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0ddd9132486077832316', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2852300}
+2023-02-15 00:40:29,552 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:373}] to localhost:27017
+2023-02-15 00:40:29,592 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:40:29,691 INFO com.petrenko.service.CarService [main] Car was crated: 63ec0ddd9132486077832318
+2023-02-15 00:42:36,579 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:42:36,611 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:42:36,629 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0e5c0b40603dcdc12fbc', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:389}] to localhost:27017
+2023-02-15 00:42:36,635 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0e5c0b40603dcdc12fbc', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3465300}
+2023-02-15 00:42:36,647 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:390}] to localhost:27017
+2023-02-15 00:42:36,688 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:42:36,757 INFO com.petrenko.service.CarService [main] Car was crated: 63ec0e5c0b40603dcdc12fbe
+2023-02-15 00:48:39,597 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:48:39,628 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:48:39,645 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0fc79ee56d05f898b6fd', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:393}] to localhost:27017
+2023-02-15 00:48:39,651 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0fc79ee56d05f898b6fd', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3375300}
+2023-02-15 00:48:39,665 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:394}] to localhost:27017
+2023-02-15 00:48:39,704 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:48:39,775 INFO com.petrenko.service.CarService [main] Car was crated: 63ec0fc79ee56d05f898b6ff
+2023-02-15 00:49:26,727 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:49:26,759 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:49:26,777 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec0ff65b862f3deae2a24b', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:395}] to localhost:27017
+2023-02-15 00:49:26,781 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec0ff65b862f3deae2a24b', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2890600}
+2023-02-15 00:49:26,792 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:396}] to localhost:27017
+2023-02-15 00:49:26,833 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:49:26,897 INFO com.petrenko.service.CarService [main] Car was crated: 63ec0ff65b862f3deae2a24d
+2023-02-15 00:50:54,119 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:50:54,149 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:50:54,168 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec104d7c09c130ce2232ba', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:397}] to localhost:27017
+2023-02-15 00:50:54,174 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec104d7c09c130ce2232ba', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3895200}
+2023-02-15 00:50:54,188 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:398}] to localhost:27017
+2023-02-15 00:50:54,227 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:50:54,302 INFO com.petrenko.service.CarService [main] Car was crated: 63ec104e7c09c130ce2232bc
+2023-02-15 00:52:26,520 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:52:26,554 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:52:26,568 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec10aaac997e202fb09605', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:399}] to localhost:27017
+2023-02-15 00:52:26,573 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec10aaac997e202fb09605', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2998900}
+2023-02-15 00:52:26,587 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:400}] to localhost:27017
+2023-02-15 00:52:26,629 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:52:26,694 INFO com.petrenko.service.CarService [main] Car was crated: 63ec10aaac997e202fb09607
+2023-02-15 00:54:39,505 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:54:39,538 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:54:39,562 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec112f2dad4176a64a9fa3', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:401}] to localhost:27017
+2023-02-15 00:54:39,566 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec112f2dad4176a64a9fa3', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2941800}
+2023-02-15 00:54:39,577 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:402}] to localhost:27017
+2023-02-15 00:54:39,619 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:54:39,688 INFO com.petrenko.service.CarService [main] Car was crated: 63ec112f2dad4176a64a9fa5
+2023-02-15 00:55:36,560 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:55:36,596 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:55:36,614 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1168d971f7077f22bffc', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:403}] to localhost:27017
+2023-02-15 00:55:36,619 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1168d971f7077f22bffc', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2802300}
+2023-02-15 00:55:36,629 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:404}] to localhost:27017
+2023-02-15 00:55:36,673 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:55:36,746 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1168d971f7077f22bffe
+2023-02-15 00:56:54,360 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:56:54,392 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:56:54,414 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec11b6c1d5441cbf1b6522', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:405}] to localhost:27017
+2023-02-15 00:56:54,419 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec11b6c1d5441cbf1b6522', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3253000}
+2023-02-15 00:56:54,430 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:406}] to localhost:27017
+2023-02-15 00:56:54,471 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:56:54,534 INFO com.petrenko.service.CarService [main] Car was crated: 63ec11b6c1d5441cbf1b6524
+2023-02-15 00:59:10,150 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:59:10,180 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:59:10,202 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec123d213a160c4c4ba0ad', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:407}] to localhost:27017
+2023-02-15 00:59:10,207 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec123d213a160c4c4ba0ad', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3297100}
+2023-02-15 00:59:10,219 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:408}] to localhost:27017
+2023-02-15 00:59:10,262 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:59:10,338 INFO com.petrenko.service.CarService [main] Car was crated: 63ec123e213a160c4c4ba0af
+2023-02-15 00:59:31,010 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 00:59:31,043 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 00:59:31,059 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1252a0495504f82d6da9', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:409}] to localhost:27017
+2023-02-15 00:59:31,063 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1252a0495504f82d6da9', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2103100}
+2023-02-15 00:59:31,073 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:410}] to localhost:27017
+2023-02-15 00:59:31,114 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 00:59:31,178 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1253a0495504f82d6dab
+2023-02-15 01:01:41,899 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:01:41,930 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:01:41,947 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec12d5e51af11ad7881d79', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:411}] to localhost:27017
+2023-02-15 01:01:41,951 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec12d5e51af11ad7881d79', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2505500}
+2023-02-15 01:01:41,965 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:412}] to localhost:27017
+2023-02-15 01:01:42,009 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:01:42,080 INFO com.petrenko.service.CarService [main] Car was crated: 63ec12d6e51af11ad7881d7b
+2023-02-15 01:02:18,747 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:02:18,777 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:02:18,796 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec12fa8bff607caa2800ef', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:413}] to localhost:27017
+2023-02-15 01:02:18,801 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec12fa8bff607caa2800ef', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3220000}
+2023-02-15 01:02:18,813 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:414}] to localhost:27017
+2023-02-15 01:02:18,853 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:02:18,920 INFO com.petrenko.service.CarService [main] Car was crated: 63ec12fa8bff607caa2800f1
+2023-02-15 01:02:28,921 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:02:28,954 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:02:28,970 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec130459a7c3589c059837', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:415}] to localhost:27017
+2023-02-15 01:02:28,974 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec130459a7c3589c059837', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2496100}
+2023-02-15 01:02:28,986 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:416}] to localhost:27017
+2023-02-15 01:02:29,025 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:02:29,099 INFO com.petrenko.service.CarService [main] Car was crated: 63ec130559a7c3589c059839
+2023-02-15 01:04:26,112 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:04:26,145 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:04:26,165 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1379d518de6a09f0ad09', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:417}] to localhost:27017
+2023-02-15 01:04:26,168 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1379d518de6a09f0ad09', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2430200}
+2023-02-15 01:04:26,182 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:418}] to localhost:27017
+2023-02-15 01:04:26,223 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:04:26,278 INFO com.petrenko.service.CarService [main] Car was crated: 63ec137ad518de6a09f0ad0b
+2023-02-15 01:06:00,058 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:06:00,092 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:06:00,114 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec13d755e48d0a25c52b66', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:419}] to localhost:27017
+2023-02-15 01:06:00,119 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec13d755e48d0a25c52b66', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2957100}
+2023-02-15 01:06:00,133 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:420}] to localhost:27017
+2023-02-15 01:06:00,192 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:06:00,264 INFO com.petrenko.service.CarService [main] Car was crated: 63ec13d855e48d0a25c52b68
+2023-02-15 01:06:51,783 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:06:51,816 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:06:51,830 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec140bdfde227994006f14', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:421}] to localhost:27017
+2023-02-15 01:06:51,833 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec140bdfde227994006f14', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2055900}
+2023-02-15 01:06:51,845 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:422}] to localhost:27017
+2023-02-15 01:06:51,887 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:06:51,947 INFO com.petrenko.service.CarService [main] Car was crated: 63ec140bdfde227994006f16
+2023-02-15 01:07:27,901 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:07:27,934 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:07:27,953 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec142f29325972d9549e0c', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:423}] to localhost:27017
+2023-02-15 01:07:27,957 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec142f29325972d9549e0c', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2907300}
+2023-02-15 01:07:27,968 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:424}] to localhost:27017
+2023-02-15 01:07:28,009 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:07:28,072 INFO com.petrenko.service.CarService [main] Car was crated: 63ec143029325972d9549e0e
+2023-02-15 01:08:29,283 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:08:29,318 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:08:29,339 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec146d00ff742aaf9b8801', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:425}] to localhost:27017
+2023-02-15 01:08:29,343 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec146d00ff742aaf9b8801', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2634900}
+2023-02-15 01:08:29,354 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:426}] to localhost:27017
+2023-02-15 01:08:29,394 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:08:29,462 INFO com.petrenko.service.CarService [main] Car was crated: 63ec146d00ff742aaf9b8803
+2023-02-15 01:09:01,402 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:09:01,434 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:09:01,454 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec148d14fe3e7feae0974b', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:427}] to localhost:27017
+2023-02-15 01:09:01,458 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec148d14fe3e7feae0974b', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2475200}
+2023-02-15 01:09:01,468 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:428}] to localhost:27017
+2023-02-15 01:09:01,508 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:09:01,577 INFO com.petrenko.service.CarService [main] Car was crated: 63ec148d14fe3e7feae0974d
+2023-02-15 01:12:26,355 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:12:26,384 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:12:26,406 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec155a7e73dd510bcf9504', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:429}] to localhost:27017
+2023-02-15 01:12:26,411 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec155a7e73dd510bcf9504', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3021300}
+2023-02-15 01:12:26,422 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:430}] to localhost:27017
+2023-02-15 01:12:26,462 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:12:26,530 INFO com.petrenko.service.CarService [main] Car was crated: 63ec155a7e73dd510bcf9506
+2023-02-15 01:15:32,497 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:15:32,531 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:15:32,547 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1614b8a87d771ba1e12f', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:431}] to localhost:27017
+2023-02-15 01:15:32,551 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1614b8a87d771ba1e12f', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2891800}
+2023-02-15 01:15:32,562 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:432}] to localhost:27017
+2023-02-15 01:15:32,600 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:15:32,669 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1614b8a87d771ba1e131
+2023-02-15 01:16:44,533 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:16:44,563 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:16:44,582 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec165c1aa292659f2a15a6', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:433}] to localhost:27017
+2023-02-15 01:16:44,587 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec165c1aa292659f2a15a6', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3071200}
+2023-02-15 01:16:44,599 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:434}] to localhost:27017
+2023-02-15 01:16:44,638 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:16:44,712 INFO com.petrenko.service.CarService [main] Car was crated: 63ec165c1aa292659f2a15a8
+2023-02-15 01:24:29,200 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:24:29,231 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:24:29,249 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec182de982eb2106591d7c', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:435}] to localhost:27017
+2023-02-15 01:24:29,253 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec182de982eb2106591d7c', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2815000}
+2023-02-15 01:24:29,264 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:436}] to localhost:27017
+2023-02-15 01:24:29,302 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:24:29,368 INFO com.petrenko.service.CarService [main] Car was crated: 63ec182de982eb2106591d7e
+2023-02-15 01:25:41,285 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:25:41,318 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:25:41,333 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1875f2bf313cc478c85a', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:437}] to localhost:27017
+2023-02-15 01:25:41,337 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1875f2bf313cc478c85a', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2534600}
+2023-02-15 01:25:41,350 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:438}] to localhost:27017
+2023-02-15 01:25:41,389 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:25:41,460 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1875f2bf313cc478c85c
+2023-02-15 01:27:00,134 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:27:00,164 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:27:00,188 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec18c35393683f238c5018', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:439}] to localhost:27017
+2023-02-15 01:27:00,192 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec18c35393683f238c5018', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2352800}
+2023-02-15 01:27:00,204 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:440}] to localhost:27017
+2023-02-15 01:27:00,244 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:27:00,306 INFO com.petrenko.service.CarService [main] Car was crated: 63ec18c45393683f238c501a
+2023-02-15 01:30:36,147 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:30:36,178 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:30:36,199 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec199b748a4803d0e435e9', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:441}] to localhost:27017
+2023-02-15 01:30:36,203 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec199b748a4803d0e435e9', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2151600}
+2023-02-15 01:30:36,214 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:442}] to localhost:27017
+2023-02-15 01:30:36,255 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:30:36,319 INFO com.petrenko.service.CarService [main] Car was crated: 63ec199c748a4803d0e435eb
+2023-02-15 01:30:36,322 INFO com.petrenko.service.CarService [main] Car was crated: 63ec199c748a4803d0e435ed
+2023-02-15 01:30:36,324 INFO com.petrenko.service.CarService [main] Car was crated: 63ec199c748a4803d0e435ef
+2023-02-15 01:30:36,327 INFO com.petrenko.service.CarService [main] Car was crated: 63ec199c748a4803d0e435f1
+2023-02-15 01:30:36,329 INFO com.petrenko.service.CarService [main] Car was crated: 63ec199c748a4803d0e435f3
+2023-02-15 01:31:03,311 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:31:03,344 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:31:03,362 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec19b7179e021aa54350e7', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:443}] to localhost:27017
+2023-02-15 01:31:03,366 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec19b7179e021aa54350e7', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2713100}
+2023-02-15 01:31:03,376 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:444}] to localhost:27017
+2023-02-15 01:31:03,417 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:31:03,478 INFO com.petrenko.service.CarService [main] Car was crated: 63ec19b7179e021aa54350e9
+2023-02-15 01:31:03,482 INFO com.petrenko.service.CarService [main] Car was crated: 63ec19b7179e021aa54350eb
+2023-02-15 01:31:03,486 INFO com.petrenko.service.CarService [main] Car was crated: 63ec19b7179e021aa54350ed
+2023-02-15 01:31:03,489 INFO com.petrenko.service.CarService [main] Car was crated: 63ec19b7179e021aa54350ef
+2023-02-15 01:31:03,492 INFO com.petrenko.service.CarService [main] Car was crated: 63ec19b7179e021aa54350f1
+2023-02-15 01:42:45,346 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:42:45,378 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:42:45,400 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1c75a5159f682de86762', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:445}] to localhost:27017
+2023-02-15 01:42:45,404 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1c75a5159f682de86762', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2541100}
+2023-02-15 01:42:45,416 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:446}] to localhost:27017
+2023-02-15 01:42:45,425 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:42:45,458 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:42:45,529 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1c75a5159f682de86764
+2023-02-15 01:42:45,534 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1c75a5159f682de86766
+2023-02-15 01:42:45,540 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1c75a5159f682de86768
+2023-02-15 01:42:45,543 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1c75a5159f682de8676a
+2023-02-15 01:42:45,546 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1c75a5159f682de8676c
+2023-02-15 01:43:44,786 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:43:44,818 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:43:44,835 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1cb08d9d7c6753d2af04', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:447}] to localhost:27017
+2023-02-15 01:43:44,839 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1cb08d9d7c6753d2af04', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2493900}
+2023-02-15 01:43:44,850 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:448}] to localhost:27017
+2023-02-15 01:43:44,887 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:43:44,892 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:43:44,961 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af06
+2023-02-15 01:43:44,965 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af08
+2023-02-15 01:43:44,968 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af0a
+2023-02-15 01:43:44,971 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af0c
+2023-02-15 01:43:44,973 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af0e
+2023-02-15 01:43:44,975 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af10
+2023-02-15 01:43:44,977 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af12
+2023-02-15 01:43:44,979 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af14
+2023-02-15 01:43:44,981 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb08d9d7c6753d2af16
+2023-02-15 01:43:45,007 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1cb08d9d7c6753d2af17
+2023-02-15 01:43:45,010 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af19
+2023-02-15 01:43:45,014 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af1b
+2023-02-15 01:43:45,017 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af1d
+2023-02-15 01:43:45,020 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af1f
+2023-02-15 01:43:45,024 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af21
+2023-02-15 01:43:45,027 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af23
+2023-02-15 01:43:45,030 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af25
+2023-02-15 01:43:45,032 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af27
+2023-02-15 01:43:45,035 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af29
+2023-02-15 01:43:45,037 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af2b
+2023-02-15 01:43:45,040 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1cb18d9d7c6753d2af2c
+2023-02-15 01:43:45,042 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af2e
+2023-02-15 01:43:45,046 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af30
+2023-02-15 01:43:45,049 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af32
+2023-02-15 01:43:45,052 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af34
+2023-02-15 01:43:45,054 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af36
+2023-02-15 01:43:45,056 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1cb18d9d7c6753d2af37
+2023-02-15 01:43:45,058 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af39
+2023-02-15 01:43:45,061 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af3b
+2023-02-15 01:43:45,064 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af3d
+2023-02-15 01:43:45,066 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af3f
+2023-02-15 01:43:45,069 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af41
+2023-02-15 01:43:45,071 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1cb18d9d7c6753d2af42
+2023-02-15 01:43:45,073 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af44
+2023-02-15 01:43:45,076 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af46
+2023-02-15 01:43:45,078 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af48
+2023-02-15 01:43:45,081 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af4a
+2023-02-15 01:43:45,083 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af4c
+2023-02-15 01:43:45,086 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af4e
+2023-02-15 01:43:45,088 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af50
+2023-02-15 01:43:45,090 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1cb18d9d7c6753d2af52
+2023-02-15 01:43:45,091 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1cb18d9d7c6753d2af53
+2023-02-15 01:48:43,489 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:48:43,520 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:48:43,542 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1ddb2806d913bf053b4b', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:454}] to localhost:27017
+2023-02-15 01:48:43,547 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1ddb2806d913bf053b4b', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3465400}
+2023-02-15 01:48:43,558 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:455}] to localhost:27017
+2023-02-15 01:48:43,595 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:48:43,600 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:48:43,667 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b4d
+2023-02-15 01:48:43,671 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b4f
+2023-02-15 01:48:43,677 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b51
+2023-02-15 01:48:43,679 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b53
+2023-02-15 01:48:43,682 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b55
+2023-02-15 01:48:43,684 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b57
+2023-02-15 01:48:43,686 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b59
+2023-02-15 01:48:43,688 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b5b
+2023-02-15 01:48:43,690 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b5d
+2023-02-15 01:48:43,693 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b5f
+2023-02-15 01:48:43,720 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1ddb2806d913bf053b60
+2023-02-15 01:48:43,723 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b62
+2023-02-15 01:48:43,726 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b64
+2023-02-15 01:48:43,729 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b66
+2023-02-15 01:48:43,730 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1ddb2806d913bf053b67
+2023-02-15 01:48:43,733 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b69
+2023-02-15 01:48:43,736 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b6b
+2023-02-15 01:48:43,739 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b6d
+2023-02-15 01:48:43,741 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b6f
+2023-02-15 01:48:43,743 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1ddb2806d913bf053b70
+2023-02-15 01:48:43,746 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b72
+2023-02-15 01:48:43,749 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b74
+2023-02-15 01:48:43,752 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b76
+2023-02-15 01:48:43,755 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b78
+2023-02-15 01:48:43,758 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b7a
+2023-02-15 01:48:43,760 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b7c
+2023-02-15 01:48:43,763 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b7e
+2023-02-15 01:48:43,764 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1ddb2806d913bf053b7f
+2023-02-15 01:48:43,767 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b81
+2023-02-15 01:48:43,769 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b83
+2023-02-15 01:48:43,771 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b85
+2023-02-15 01:48:43,773 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b87
+2023-02-15 01:48:43,776 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b89
+2023-02-15 01:48:43,778 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b8b
+2023-02-15 01:48:43,781 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b8d
+2023-02-15 01:48:43,783 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b8f
+2023-02-15 01:48:43,785 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1ddb2806d913bf053b91
+2023-02-15 01:48:43,787 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1ddb2806d913bf053b92
+2023-02-15 01:49:01,776 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:49:01,807 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:49:01,825 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1dedcf8ab74c18c6fbab', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:456}] to localhost:27017
+2023-02-15 01:49:01,829 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1dedcf8ab74c18c6fbab', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2505700}
+2023-02-15 01:49:01,840 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:457}] to localhost:27017
+2023-02-15 01:49:01,875 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:49:01,880 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:49:01,946 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbad
+2023-02-15 01:49:01,952 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbaf
+2023-02-15 01:49:01,955 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbb1
+2023-02-15 01:49:01,958 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbb3
+2023-02-15 01:49:01,961 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbb5
+2023-02-15 01:49:01,964 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbb7
+2023-02-15 01:49:01,966 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbb9
+2023-02-15 01:49:01,967 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbbb
+2023-02-15 01:49:01,969 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbbd
+2023-02-15 01:49:01,992 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1dedcf8ab74c18c6fbbe
+2023-02-15 01:49:01,996 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbc0
+2023-02-15 01:49:01,998 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1dedcf8ab74c18c6fbc1
+2023-02-15 01:49:02,001 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1dedcf8ab74c18c6fbc3
+2023-02-15 01:49:02,005 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbc5
+2023-02-15 01:49:02,009 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbc7
+2023-02-15 01:49:02,011 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbc9
+2023-02-15 01:49:02,014 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbcb
+2023-02-15 01:49:02,016 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbcd
+2023-02-15 01:49:02,019 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbcf
+2023-02-15 01:49:02,020 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1deecf8ab74c18c6fbd0
+2023-02-15 01:49:02,024 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbd2
+2023-02-15 01:49:02,026 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbd4
+2023-02-15 01:49:02,030 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbd6
+2023-02-15 01:49:02,033 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbd8
+2023-02-15 01:49:02,035 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbda
+2023-02-15 01:49:02,038 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbdc
+2023-02-15 01:49:02,040 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1deecf8ab74c18c6fbdd
+2023-02-15 01:49:02,043 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbdf
+2023-02-15 01:49:02,045 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbe1
+2023-02-15 01:49:02,048 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbe3
+2023-02-15 01:49:02,050 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbe5
+2023-02-15 01:49:02,052 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1deecf8ab74c18c6fbe7
+2023-02-15 01:49:02,054 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1deecf8ab74c18c6fbe8
+2023-02-15 01:56:44,754 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:56:44,787 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:56:44,809 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1fbc24578817665b7d53', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:458}] to localhost:27017
+2023-02-15 01:56:44,813 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1fbc24578817665b7d53', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2772800}
+2023-02-15 01:56:44,824 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:459}] to localhost:27017
+2023-02-15 01:56:44,863 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:56:44,867 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:56:44,939 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d55
+2023-02-15 01:56:44,943 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d57
+2023-02-15 01:56:44,946 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d59
+2023-02-15 01:56:44,949 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d5b
+2023-02-15 01:56:44,951 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d5d
+2023-02-15 01:56:44,953 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d5f
+2023-02-15 01:56:44,955 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d61
+2023-02-15 01:56:44,957 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d63
+2023-02-15 01:56:44,959 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d65
+2023-02-15 01:56:44,989 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fbc24578817665b7d66
+2023-02-15 01:56:44,992 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d68
+2023-02-15 01:56:44,996 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d6a
+2023-02-15 01:56:44,999 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbc24578817665b7d6c
+2023-02-15 01:56:45,003 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d6e
+2023-02-15 01:56:45,006 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d70
+2023-02-15 01:56:45,009 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d72
+2023-02-15 01:56:45,011 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d74
+2023-02-15 01:56:45,013 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fbd24578817665b7d75
+2023-02-15 01:56:45,016 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d77
+2023-02-15 01:56:45,019 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d79
+2023-02-15 01:56:45,022 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d7b
+2023-02-15 01:56:45,024 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d7d
+2023-02-15 01:56:45,028 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d7f
+2023-02-15 01:56:45,030 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d81
+2023-02-15 01:56:45,032 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d83
+2023-02-15 01:56:45,034 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d85
+2023-02-15 01:56:45,037 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d87
+2023-02-15 01:56:45,040 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d89
+2023-02-15 01:56:45,042 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fbd24578817665b7d8a
+2023-02-15 01:56:45,045 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d8c
+2023-02-15 01:56:45,047 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d8e
+2023-02-15 01:56:45,049 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fbd24578817665b7d8f
+2023-02-15 01:56:45,051 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d91
+2023-02-15 01:56:45,053 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d93
+2023-02-15 01:56:45,055 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d95
+2023-02-15 01:56:45,057 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d97
+2023-02-15 01:56:45,059 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d99
+2023-02-15 01:56:45,061 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d9b
+2023-02-15 01:56:45,063 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d9d
+2023-02-15 01:56:45,065 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fbd24578817665b7d9f
+2023-02-15 01:56:45,066 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fbd24578817665b7da0
+2023-02-15 01:57:26,730 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:57:26,762 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:57:26,782 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec1fe6c385614819f71143', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:460}] to localhost:27017
+2023-02-15 01:57:26,787 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec1fe6c385614819f71143', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2986200}
+2023-02-15 01:57:26,798 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:461}] to localhost:27017
+2023-02-15 01:57:26,834 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:57:26,839 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 01:57:26,909 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71145
+2023-02-15 01:57:26,913 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71147
+2023-02-15 01:57:26,916 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71149
+2023-02-15 01:57:26,939 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fe6c385614819f7114a
+2023-02-15 01:57:26,942 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7114c
+2023-02-15 01:57:26,945 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7114e
+2023-02-15 01:57:26,947 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71150
+2023-02-15 01:57:26,949 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71152
+2023-02-15 01:57:26,951 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71154
+2023-02-15 01:57:26,955 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71156
+2023-02-15 01:57:26,958 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71158
+2023-02-15 01:57:26,961 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7115a
+2023-02-15 01:57:26,964 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7115c
+2023-02-15 01:57:26,966 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fe6c385614819f7115d
+2023-02-15 01:57:26,968 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7115f
+2023-02-15 01:57:26,971 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71161
+2023-02-15 01:57:26,973 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71163
+2023-02-15 01:57:26,975 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fe6c385614819f71164
+2023-02-15 01:57:26,977 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71166
+2023-02-15 01:57:26,979 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71168
+2023-02-15 01:57:26,981 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fe6c385614819f71169
+2023-02-15 01:57:26,983 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7116b
+2023-02-15 01:57:26,986 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7116d
+2023-02-15 01:57:26,988 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f7116f
+2023-02-15 01:57:26,991 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71171
+2023-02-15 01:57:26,993 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71173
+2023-02-15 01:57:26,995 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71175
+2023-02-15 01:57:26,997 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71177
+2023-02-15 01:57:27,000 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe6c385614819f71179
+2023-02-15 01:57:27,002 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe7c385614819f7117b
+2023-02-15 01:57:27,005 INFO com.petrenko.service.CarService [main] Car was crated: 63ec1fe7c385614819f7117d
+2023-02-15 01:57:27,006 INFO com.petrenko.service.OrderService [main] Order was created: 63ec1fe7c385614819f7117e
+2023-02-15 01:59:37,601 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 01:59:37,634 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 01:59:37,650 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec206911dc1a6cb5f40d91', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:462}] to localhost:27017
+2023-02-15 01:59:37,654 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec206911dc1a6cb5f40d91', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2775500}
+2023-02-15 01:59:37,667 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:463}] to localhost:27017
+2023-02-15 01:59:37,703 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 01:59:37,708 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 02:04:52,741 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 02:04:52,777 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 02:04:52,795 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec21a4896b027ee91f980c', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:464}] to localhost:27017
+2023-02-15 02:04:52,799 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec21a4896b027ee91f980c', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2502600}
+2023-02-15 02:04:52,810 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:465}] to localhost:27017
+2023-02-15 02:04:52,848 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 02:04:52,853 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 02:09:59,955 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 02:09:59,991 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 02:10:00,010 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec22d7d90f0e231d5cb482', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:466}] to localhost:27017
+2023-02-15 02:10:00,015 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec22d7d90f0e231d5cb482', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3597000}
+2023-02-15 02:10:00,031 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:467}] to localhost:27017
+2023-02-15 02:10:00,068 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 02:10:00,073 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 02:14:36,528 INFO org.mongodb.driver.cluster [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-15 02:14:36,563 INFO org.mongodb.driver.cluster [main] Cluster description not yet available. Waiting for 30000 ms before timing out
+2023-02-15 02:14:36,578 INFO org.mongodb.driver.connection [cluster-ClusterId{value='63ec23ec6c6ae2405569a98c', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:468}] to localhost:27017
+2023-02-15 02:14:36,581 INFO org.mongodb.driver.cluster [cluster-ClusterId{value='63ec23ec6c6ae2405569a98c', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2025500}
+2023-02-15 02:14:36,597 INFO org.mongodb.driver.connection [main] Opened connection [connectionId{localValue:2, serverValue:469}] to localhost:27017
+2023-02-15 02:14:36,654 INFO com.petrenko.service.OrderService [main] OrderService was created
+2023-02-15 02:14:36,660 INFO com.petrenko.service.CarService [main] CarService was created
+2023-02-15 02:14:36,747 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a98e
+2023-02-15 02:14:36,751 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a990
+2023-02-15 02:14:36,755 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a992
+2023-02-15 02:14:36,760 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a994
+2023-02-15 02:14:36,763 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a996
+2023-02-15 02:14:36,765 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a998
+2023-02-15 02:14:36,791 INFO com.petrenko.service.OrderService [main] Order was created: 63ec23ec6c6ae2405569a999
+2023-02-15 02:14:36,794 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a99b
+2023-02-15 02:14:36,796 INFO com.petrenko.service.OrderService [main] Order was created: 63ec23ec6c6ae2405569a99c
+2023-02-15 02:14:36,798 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a99e
+2023-02-15 02:14:36,802 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9a0
+2023-02-15 02:14:36,805 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9a2
+2023-02-15 02:14:36,807 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9a4
+2023-02-15 02:14:36,809 INFO com.petrenko.service.OrderService [main] Order was created: 63ec23ec6c6ae2405569a9a5
+2023-02-15 02:14:36,812 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9a7
+2023-02-15 02:14:36,814 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9a9
+2023-02-15 02:14:36,816 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9ab
+2023-02-15 02:14:36,819 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9ad
+2023-02-15 02:14:36,822 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9af
+2023-02-15 02:14:36,824 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9b1
+2023-02-15 02:14:36,827 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9b3
+2023-02-15 02:14:36,829 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9b5
+2023-02-15 02:14:36,832 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9b7
+2023-02-15 02:14:36,834 INFO com.petrenko.service.OrderService [main] Order was created: 63ec23ec6c6ae2405569a9b8
+2023-02-15 02:14:36,837 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9ba
+2023-02-15 02:14:36,839 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9bc
+2023-02-15 02:14:36,842 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9be
+2023-02-15 02:14:36,844 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9c0
+2023-02-15 02:14:36,847 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9c2
+2023-02-15 02:14:36,849 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9c4
+2023-02-15 02:14:36,852 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9c6
+2023-02-15 02:14:36,855 INFO com.petrenko.service.CarService [main] Car was crated: 63ec23ec6c6ae2405569a9c8
+2023-02-15 02:14:36,856 INFO com.petrenko.service.OrderService [main] Order was created: 63ec23ec6c6ae2405569a9c9
