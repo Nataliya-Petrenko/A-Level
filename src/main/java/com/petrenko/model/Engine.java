@@ -17,7 +17,7 @@ public class Engine {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
     @Transient
-    final private Random random = new Random();
+    final transient private Random random = new Random();
     private int power;
 
     @Enumerated(EnumType.STRING)
@@ -34,7 +34,7 @@ public class Engine {
     public Engine(Type type) {
         this.power = random.nextInt(1000);
         this.type = type;
-        this.id = UUID.randomUUID().toString();
+//        this.id = UUID.randomUUID().toString();
     }
 
     @Override

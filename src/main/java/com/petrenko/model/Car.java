@@ -36,10 +36,10 @@ public abstract class Car implements CountRestore {
     private String uuidOfCar;
 
     @ManyToMany(mappedBy = "cars")
-    private Set<Order> orders = new LinkedHashSet<>();
+    private transient Set<Order> orders = new LinkedHashSet<>();
 
     @Transient
-    private final Random random = new Random();
+    private transient final Random random = new Random();
 
     public Car() {
     };
@@ -72,8 +72,8 @@ public abstract class Car implements CountRestore {
     @Override
     public String toString() {
         return "Car{" +
-                ", uuidOfCar='" + uuidOfCar +
-                "manufacturer='" + manufacturer + '\'' +
+                "uuidOfCar='" + uuidOfCar +
+                ", manufacturer='" + manufacturer + '\'' +
                 ", engine=" + engine +
                 ", color=" + color +
                 ", count=" + count +

@@ -7,6 +7,7 @@ import com.petrenko.repository.Crud;
 import com.petrenko.model.*;
 import com.petrenko.repository.HibernateRepository.HibernateCarRepository;
 import com.petrenko.repository.JdbcCarRepository;
+import com.petrenko.repository.mongo.MongoCarRepository;
 import com.petrenko.util.RandomGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +40,7 @@ public class CarService {
 
     public static CarService getInstance() {
         if (instance == null) {
-            instance = new CarService(HibernateCarRepository.getInstance());
+            instance = new CarService(MongoCarRepository.getInstance());
             LOGGER.info("CarService was created");
         }
         return instance;
@@ -413,6 +414,10 @@ public class CarService {
                 () -> System.out.println("Car with ID \"" + uuidOfCar + "\" not found")
         );
 
+    }
+
+    public List<Car> getAll() {
+        return carRepository.getAll();
     }
 
     public void printAll() {
