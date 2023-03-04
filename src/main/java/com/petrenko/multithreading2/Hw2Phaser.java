@@ -4,8 +4,9 @@ import lombok.SneakyThrows;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Phaser;
 import java.util.concurrent.TimeUnit;
 
@@ -15,14 +16,13 @@ public class Hw2Phaser {
         final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss");
 
         final Phaser phaser = new Phaser(4);
-        final List<Thread> threads = List.of(
-                new MyThread(phaser),
-                new MyThread(phaser),
-                new MyThread(phaser),
-                new MyThread(phaser)
-        );
 
-        threads.forEach(Thread::start);
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+
+        for (int i = 0; i < 4; i++) {
+            executorService.execute(new MyThread(phaser));
+        }
+
         for (int i = 0; i < 3; i++) {
             final int phase = phaser.getPhase();
             phaser.arriveAndAwaitAdvance();
@@ -37,6 +37,8 @@ public class Hw2Phaser {
             System.out.println(timeFormatter.format(LocalDateTime.now())
                     + " all phases are finished ");
         }
+
+        executorService.shutdown();
 
     }
 
