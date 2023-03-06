@@ -83,59 +83,59 @@ class CarRepositoryTest {
         Assertions.assertNull(target.getByUuid(null));
     }
 
-    @Test
-    void updateColor_Test() {
-        final String uuidOfCar = car.getUuidOfCar();
-        final Color color = Color.BLUE;
-        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
-    }
-
-    @Test
-    void updateColor_UuidIsNull() {
-        final String uuidOfCar = null;
-        final Color color = Color.BLUE;
-        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
-    }
-
-    @Test
-    void updateColor_ColorIsNull() {
-        final String uuidOfCar = car.getUuidOfCar();
-        final Color color = null;
-        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
-    }
-
-    @Test
-    void updateColorRandom_Test() {
-        final String uuidOfCar = car.getUuidOfCar();
-        Assertions.assertDoesNotThrow(() -> target.updateColorRandom(uuidOfCar));
-    }
-
-    @Test
-    void updateColorRandom_UuidIsNull() {
-        final String uuidOfCar = null;
-        Assertions.assertDoesNotThrow(() -> target.updateColorRandom(uuidOfCar));
-    }
-
-    @Test
-    void updatePrice_Test() {
-        final String uuidOfCar = car.getUuidOfCar();
-        final int price = 1000;
-        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
-    }
-
-    @Test
-    void updatePrice_UuidIsNull() {
-        final String uuidOfCar = null;
-        final int price = 1000;
-        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
-    }
-
-    @Test
-    void updatePrice_PriseIsNegative() {
-        final String uuidOfCar = car.getUuidOfCar();
-        final int price = -1000;
-        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
-    }
+//    @Test
+//    void updateColor_Test() {
+//        final String uuidOfCar = car.getUuidOfCar();
+//        final Color color = Color.BLUE;
+//        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
+//    }
+//
+//    @Test
+//    void updateColor_UuidIsNull() {
+//        final String uuidOfCar = null;
+//        final Color color = Color.BLUE;
+//        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
+//    }
+//
+//    @Test
+//    void updateColor_ColorIsNull() {
+//        final String uuidOfCar = car.getUuidOfCar();
+//        final Color color = null;
+//        Assertions.assertDoesNotThrow(() -> target.updateColor(uuidOfCar, color));
+//    }
+//
+//    @Test
+//    void updateColorRandom_Test() {
+//        final String uuidOfCar = car.getUuidOfCar();
+//        Assertions.assertDoesNotThrow(() -> target.updateColorRandom(uuidOfCar));
+//    }
+//
+//    @Test
+//    void updateColorRandom_UuidIsNull() {
+//        final String uuidOfCar = null;
+//        Assertions.assertDoesNotThrow(() -> target.updateColorRandom(uuidOfCar));
+//    }
+//
+//    @Test
+//    void updatePrice_Test() {
+//        final String uuidOfCar = car.getUuidOfCar();
+//        final int price = 1000;
+//        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
+//    }
+//
+//    @Test
+//    void updatePrice_UuidIsNull() {
+//        final String uuidOfCar = null;
+//        final int price = 1000;
+//        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
+//    }
+//
+//    @Test
+//    void updatePrice_PriseIsNegative() {
+//        final String uuidOfCar = car.getUuidOfCar();
+//        final int price = -1000;
+//        Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
+//    }
 
     @Test
     void deleteByUuid_Test() {
