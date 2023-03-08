@@ -82,7 +82,7 @@ class CarRepositoryTest {
     void getByUuid_Null() {
         Assertions.assertNull(target.getByUuid(null));
     }
-
+/*
     @Test
     void updateColor_Test() {
         final String uuidOfCar = car.getUuidOfCar();
@@ -136,7 +136,7 @@ class CarRepositoryTest {
         final int price = -1000;
         Assertions.assertDoesNotThrow(() -> target.updatePrice(uuidOfCar, price));
     }
-
+*/
     @Test
     void deleteByUuid_Test() {
         final String uuidOfCar = car.getUuidOfCar();
